@@ -1,5 +1,23 @@
 # Feathercloak Consulting
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+This repository is part of **Feathercloak Consulting**, the professional portfolio of Rick Metz.  
+All content here is licensed under **Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0)**.
+
+⚠️ **Disclaimer**  
+Scripts, designs, and strategies are illustrative and provided for demonstration purposes only.  
+They are **not intended for direct operational use** without explicit consent from the author.
+
+---
+
+## License Summary
+- **Attribution** — Credit must be given to Rick Metz / Feathercloak Consulting.  
+- **NonCommercial** — No commercial use or monetization permitted.  
+- **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+📜 Full license text: [CC BY-NC 4.0 Legal Code](https://creativecommons.org/licenses/by-nc/4.0/legalcode) 
+
 Welcome to **Feathercloak Consulting**, the professional portfolio of Rick Metz — Cybersecurity Engineer, Automation Specialist, and Embedded Consultant.
 
 This repository showcases:
