@@ -6,7 +6,7 @@ Pleasant Hill, MO | 816‑209‑4771 | ninponeer@gmail.com
 ---
 
 ## Professional Summary
-A highly creative and disciplined Software Engineer with over 15 years of experience in IT and a deep passion for building robust, modular, and scalable systems. Proven expertise in full-stack Python development, REST API integration, and process automation. Adept at designing and implementing complex, data-driven pipelines from the ground up, with a strong focus on code quality, comprehensive documentation, and performance optimization. Eager to apply a background in security-conscious environments and a forward-thinking approach to engineering to contribute to Tenable's mission of reducing cyber risk.
+Software Engineer with 15+ years of experience building robust, modular, and scalable systems in security-conscious environments. Proven expertise in full-stack Python development, REST API integration, and process automation. Specialized in designing complex, data-driven pipelines from the ground up with strong focus on code quality, comprehensive documentation, and performance optimization. Deep background in vulnerability management platforms (Tenable.sc/ACAS) and security automation, bringing both engineering discipline and domain expertise to reduce cyber risk through innovative technical solutions.
 
 ---
 
@@ -59,10 +59,32 @@ Architected and developed a comprehensive, multi-engine procedural generation pl
 
 ### Cybersecurity Solutions Engineer / Tenable SME
 **Pacific Gas & Electric (Embedded Consultant)** | Remote | Sep 2021 – Present
-- Served as the primary Tenable Subject Matter Expert, architecting and leading the deployment of enterprise-scale vulnerability management solutions across a complex, distributed network.
-- Engineered a comprehensive enterprise scan strategy with staggered logic to ensure stability of application, database, and network stacks during high-volume assessments.
-- Automated the full lifecycle of vulnerability data and patch management for Tenable.sc instances in air-gapped environments using Python and Bash, eliminating 8+ hours of weekly manual work.
-- Built a Python service to integrate Tenable.sc with Infoblox IPAM via REST APIs, creating dynamic asset lists that closed significant scan coverage gaps and eliminated static IP list maintenance.
+
+Serving as primary Tenable Subject Matter Expert, architecting and leading deployment of enterprise-scale vulnerability management solutions across complex, distributed networks.
+
+**Platform Engineering & Architecture**
+- Engineered comprehensive enterprise scan strategy with staggered logic ensuring application, database, and network stack stability during high-volume assessments
+- Implemented full credentialed scanning across all supported operating systems with secure privilege elevation mechanisms (`sudo`, `WinRM`, `Cisco 'enable'`)
+- Deployed Nessus Network Monitor (NNM) for continuous passive vulnerability monitoring, eliminating network blind spots
+- Developed custom, non-disruptive scan policies for sensitive ICS/OT environments
+
+**Automation & Integration Projects**
+
+*Air-Gapped Network Automation*
+- Automated full lifecycle of vulnerability data and patch management for Tenable.sc instances in air-gapped environments using Python and Bash
+- Engineered secure transport leveraging Dell EMC Data Domain with one-way replication for isolated network segments
+- **Impact:** Eliminated 8+ hours of weekly manual work, reduced human error, ensured timely vulnerability intelligence delivery
+
+*Infoblox & Tenable Integration*
+- Built Python service integrating Tenable.sc with Infoblox IPAM via REST APIs for dynamic asset discovery
+- Implemented intelligent grouping by business unit, geographic location, and custom attributes
+- Automated creation/updates of Tenable.sc asset lists for discovery and vulnerability scans
+- **Impact:** Closed significant scan coverage gaps, eliminated static IP list maintenance
+
+*BeyondTrust PAM Integration*
+- Integrated Tenable.sc with BeyondTrust Password Safe for automated credential rotation
+- Developed Python automation to fetch rotated passwords and dynamically update scan credentials
+- **Impact:** Eliminated static scanning passwords, enforced strict rotation policies, ensured reliable authenticated scanning
 
 ### USMC – KCITC Datacenter | Kansas City, MO | Jun 2014 – Jul 2021
 
