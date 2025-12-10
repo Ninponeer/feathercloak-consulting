@@ -1,3 +1,4 @@
+
 # Rick Metz
 Cybersecurity Systems Engineer | Security Automation & Platform Engineering  
 Pleasant Hill, MO | 816‑209‑4771 | ninponeer@gmail.com  
@@ -6,23 +7,23 @@ Pleasant Hill, MO | 816‑209‑4771 | ninponeer@gmail.com
 ---
 
 ## Professional Summary
-Cybersecurity Systems Engineer with 15+ years of experience building robust, modular, and scalable systems in security-conscious environments. Proven expertise in full-stack Python development, REST API integration, and process automation. Specialized in designing complex, data-driven pipelines from the ground up with strong focus on code quality, comprehensive documentation, and performance optimization. Deep background in vulnerability management platforms (Tenable.sc/ACAS) and security automation, bringing both engineering discipline and domain expertise to reduce cyber risk through innovative technical solutions.
+Cybersecurity Systems Engineer with 15+ years of experience securing hybrid infrastructure across on-premises, distributed, and multi-cloud environments. Proven expertise in full-stack Python development, REST API integration, and process automation for complex security operations. Specialized in designing scalable vulnerability management solutions spanning AWS, Azure, air-gapped networks, and geographically distributed infrastructure. Deep background in vulnerability management platforms (Tenable.sc/ACAS, Tenable Vulnerability Management [SaaS], Tenable Web Application Scanners) and security automation, bringing both engineering discipline and domain expertise to reduce cyber risk across diverse infrastructure topologies. Recent experience deploying containerized security sensors and operationalizing application security scanning to replace legacy solutions, expanding coverage to modern SAST/DAST/IAST domains.
 
 ---
 
 ## Core Competencies
 
-**Vulnerability & Security Concepts**  
-Vulnerability Management (Tenable.sc/ACAS), Credentialed Scanning, Passive Monitoring (NNM), STIG/CIS Hardening, SIEM (Splunk), Privileged Access Management (PAM)
+**Infrastructure & Cloud Security**  
+Multi-Cloud Security Architecture (AWS, Azure), Vulnerability Management (Tenable.sc/ACAS, Tenable Vulnerability Management [SaaS], Tenable Web Application Scanners), Container Security (Docker), Network Security Monitoring (NNM), Credentialed Scanning, Application Security Scanning (SAST/DAST/IAST), STIG/CIS Hardening, SIEM (Splunk)
 
-**Security & Integration Libraries**  
-`pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`
+**Identity & Access Management**  
+Privileged Access Management (PAM), Automated Credential Rotation, Role-Based Access Control (RBAC), Secret Management, Secure Privilege Elevation
 
-**Automation & DevOps**  
-CI/CD Pipeline Concepts, Process Automation, Infrastructure-as-Code (Ansible), CLI Tool Development, Automated Testing & Validation, Configuration Management, Secure Credential Management, Log Aggregation & Analysis
+**Security Automation & Integration**  
+`pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`, REST API Development, Process Automation, Infrastructure-as-Code (Ansible)
 
 **Software Engineering & Architecture**  
-Modular System Design, API Client Development (REST), Full-Stack Python Development, Data Modeling & Serialization (JSON/YAML), Dependency Management, Test-Driven Development (TDD), Performance Benchmarking & Optimization, GPU Acceleration (CuPy)
+Modular System Design, API Client Development (REST), Full-Stack Python Development, Data Modeling & Serialization (JSON/YAML), CLI Tool Development, Automated Testing & Validation, Performance Benchmarking & Optimization, GPU Acceleration (CuPy)
 
 **Languages & Tools**  
 **Python** (Expert), **PowerShell**, **Bash**, Git, Docker, Ansible, Pytest, VMware, Nmap, Wireshark
@@ -65,11 +66,13 @@ Architected and developed a comprehensive, multi-engine procedural generation pl
 
 Serving as primary Tenable Subject Matter Expert, architecting and leading deployment of enterprise-scale vulnerability management solutions across complex, distributed networks.
 
-**Platform Engineering & Architecture**
-- Engineered comprehensive enterprise scan strategy with staggered logic ensuring application, database, and network stack stability during high-volume assessments
-- Implemented full credentialed scanning across all supported operating systems with secure privilege elevation mechanisms (`sudo`, `WinRM`, `Cisco 'enable'`)
-- Deployed Nessus Network Monitor (NNM) for continuous passive vulnerability monitoring, eliminating network blind spots
-- Developed custom, non-disruptive scan policies for sensitive ICS/OT environments
+**Hybrid Infrastructure Security & Platform Engineering**
+- Architected vulnerability assessment strategy for hybrid infrastructure spanning on-premises datacenters, geographically distributed facilities, and multi-cloud environments (AWS, Azure) in collaboration with cloud engineering teams
+- Engineered comprehensive enterprise scan strategy with staggered logic ensuring application, database, and network stack stability during high-volume assessments across complex, segmented networks and air-gapped environments
+- Implemented full credentialed scanning across all supported operating systems with secure privilege elevation mechanisms (`sudo`, `WinRM`, `Cisco 'enable'`) for both cloud and on-premises infrastructure
+- Deployed containerized Tenable Web Application Scanner sensors using Docker for scalable application security testing across distributed infrastructure
+- Deployed Nessus Network Monitor (NNM) for continuous passive vulnerability monitoring across hybrid networks, eliminating blind spots in both cloud and on-premises environments
+- Developed custom, non-disruptive scan policies for sensitive ICS/OT environments and air-gapped network segments
 
 **Automation & Integration Projects**
 
@@ -84,10 +87,11 @@ Serving as primary Tenable Subject Matter Expert, architecting and leading deplo
 - Automated creation/updates of Tenable.sc asset lists for discovery and vulnerability scans
 - **Impact:** Closed significant scan coverage gaps, eliminated static IP list maintenance
 
-*BeyondTrust PAM Integration*
-- Integrated Tenable.sc with BeyondTrust Password Safe for automated credential rotation
-- Developed Python automation to fetch rotated passwords and dynamically update scan credentials
-- **Impact:** Eliminated static scanning passwords, enforced strict rotation policies, ensured reliable authenticated scanning
+*BeyondTrust PAM Integration & Secret Management*
+- Designed and implemented automated credential rotation system integrating Tenable.sc with BeyondTrust Password Safe
+- Developed Python automation to fetch rotated passwords and dynamically update scan credentials with role-based access controls
+- Implemented secret management controls limiting privileged credential exposure to authorized operations and engineering personnel only
+- **Impact:** Eliminated static scanning passwords, enforced strict rotation policies, ensured reliable authenticated scanning while maintaining least-privilege access
 
 ### USMC – KCITC Datacenter | Kansas City, MO | Jun 2014 – Jul 2021
 
