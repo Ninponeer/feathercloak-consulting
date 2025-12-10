@@ -181,3 +181,4 @@ client_data/
 *.local.*
 config.local.*
 settings.local.*
+.private/

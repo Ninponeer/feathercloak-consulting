@@ -1,31 +1,34 @@
 # Rick Metz
-Software Engineer | Automation & Systems Architecture  
+Cybersecurity Systems Engineer | Security Automation & Platform Engineering  
 Pleasant Hill, MO | 816‑209‑4771 | ninponeer@gmail.com  
 [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a)
 
 ---
 
 ## Professional Summary
-Software Engineer with 15+ years of experience building robust, modular, and scalable systems in security-conscious environments. Proven expertise in full-stack Python development, REST API integration, and process automation. Specialized in designing complex, data-driven pipelines from the ground up with strong focus on code quality, comprehensive documentation, and performance optimization. Deep background in vulnerability management platforms (Tenable.sc/ACAS) and security automation, bringing both engineering discipline and domain expertise to reduce cyber risk through innovative technical solutions.
+Cybersecurity Systems Engineer with 15+ years of experience building robust, modular, and scalable systems in security-conscious environments. Proven expertise in full-stack Python development, REST API integration, and process automation. Specialized in designing complex, data-driven pipelines from the ground up with strong focus on code quality, comprehensive documentation, and performance optimization. Deep background in vulnerability management platforms (Tenable.sc/ACAS) and security automation, bringing both engineering discipline and domain expertise to reduce cyber risk through innovative technical solutions.
 
 ---
 
 ## Core Competencies
 
-**Software Engineering & Architecture**  
-Modular System Design, API Client Development (REST), Full-Stack Python Development, Data Modeling & Serialization (JSON/YAML), Dependency Management, Test-Driven Development (TDD), Performance Benchmarking & Optimization, GPU Acceleration (CuPy)
+**Vulnerability & Security Concepts**  
+Vulnerability Management (Tenable.sc/ACAS), Credentialed Scanning, Passive Monitoring (NNM), STIG/CIS Hardening, SIEM (Splunk), Privileged Access Management (PAM)
+
+**Security & Integration Libraries**  
+`pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`
 
 **Automation & DevOps**  
 CI/CD Pipeline Concepts, Process Automation, Infrastructure-as-Code (Ansible), CLI Tool Development, Automated Testing & Validation, Configuration Management, Secure Credential Management, Log Aggregation & Analysis
+
+**Software Engineering & Architecture**  
+Modular System Design, API Client Development (REST), Full-Stack Python Development, Data Modeling & Serialization (JSON/YAML), Dependency Management, Test-Driven Development (TDD), Performance Benchmarking & Optimization, GPU Acceleration (CuPy)
 
 **Languages & Tools**  
 **Python** (Expert), **PowerShell**, **Bash**, Git, Docker, Ansible, Pytest, VMware, Nmap, Wireshark
 
 **Key Python Libraries**  
-`google-genai`, `Pillow (PIL)`, `librosa`, `NumPy`, `SciPy`, `CuPy`, `requests`, `argparse`
-
-**Vulnerability & Security Concepts**  
-Vulnerability Management (Tenable.sc/ACAS), Credentialed Scanning, Passive Monitoring (NNM), STIG/CIS Hardening, SIEM (Splunk), Privileged Access Management (PAM)
+`Pandas`, `NumPy`, `SciPy`, `CuPy`, `requests`, `librosa`, `argparse`, `google-genai`, `pixellab`, `Pillow (PIL)`
 
 ---
 
