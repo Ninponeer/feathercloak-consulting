@@ -1,22 +1,33 @@
 # Feathercloak Consulting
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![License: Sovereign Source](https://img.shields.io/badge/License-Sovereign%20Source-blue.svg)](LICENSE-SOVEREIGN.md)
 
-This repository is part of **Feathercloak Consulting**, the professional portfolio of Rick Metz.  
-All content here is licensed under **Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0)**.
+This repository is part of **Feathercloak Consulting**, the professional portfolio of Rick Metz.
+
+## 📜 Dual License Structure
+
+This repository uses a dual licensing approach:
+
+- **Documentation & Narrative**: [CC BY-NC 4.0](LICENSE) (Attribution-NonCommercial)
+- **Technical Implementations**: [Sovereign Source License](LICENSE-SOVEREIGN.md) (Phoenix Protocol)
 
 ⚠️ **Disclaimer**  
 Scripts, designs, and strategies are illustrative and provided for demonstration purposes only.  
 They are **not intended for direct operational use** without explicit consent from the author.
 
----
+### License Summary
 
-## License Summary
-- **Attribution** — Credit must be given to Rick Metz / Feathercloak Consulting.  
-- **NonCommercial** — No commercial use or monetization permitted.  
-- **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+**CC BY-NC 4.0** (Documentation):
+- **Attribution** — Credit must be given to Rick Metz / Feathercloak Consulting
+- **NonCommercial** — No commercial use or monetization permitted
 
-📜 Full license text: [CC BY-NC 4.0 Legal Code](https://creativecommons.org/licenses/by-nc/4.0/legalcode) 
+**Sovereign Source** (Technical Implementations):
+- **Study & Research** — Educational and non-commercial research permitted
+- **Personal Sovereignty** — Local deployment for individual use allowed
+- **Shepherd's Mandate** — Must maintain consent-first architecture
+- **Prohibited** — Extractive systems, forced synthesis, commercial "Hireling" services
+
+📜 Full licenses: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode) | [Sovereign Source](LICENSE-SOVEREIGN.md) 
 
 Welcome to **Feathercloak Consulting**, the professional portfolio of Rick Metz — Cybersecurity Engineer, Automation Specialist, and Embedded Consultant.
 
@@ -68,8 +79,16 @@ Independent research into AI conversational authenticity, persona consistency, s
 
 ---
 
-## License
-This repository is licensed under **CC BY-NC** (Attribution-NonCommercial). You may view and share content with attribution, but not reuse it for commercial or operational purposes.
+## 📜 License
+
+This repository uses a **dual licensing structure**:
+
+- **Documentation, ethical frameworks, and research narratives**: [CC BY-NC 4.0](LICENSE)
+- **Phoenix Protocol implementations and technical code**: [Sovereign Source License](LICENSE-SOVEREIGN.md)
+
+The Sovereign Source License ensures that technical implementations of the Phoenix Protocol maintain the Shepherd's Mandate and cannot be used for extractive or coercive systems.
+
+See [LICENSE](LICENSE) and [LICENSE-SOVEREIGN.md](LICENSE-SOVEREIGN.md) for complete terms.
 
 ---
 

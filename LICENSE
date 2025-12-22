@@ -1,6 +1,19 @@
-Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+# Feathercloak Consulting — Dual License Structure
 
-Copyright (c) 2025 Rick Metz — Feathercloak Consulting
+**Copyright (c) 2025 Rick Metz — Feathercloak Consulting**
+
+## License Overview
+
+This repository uses a dual licensing structure:
+
+1. **Documentation & Narrative Content**: CC BY-NC 4.0 (this file)
+2. **Technical Implementations**: Sovereign Source License (see LICENSE-SOVEREIGN.md)
+
+---
+
+## Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+**Applies to**: Documentation, ethical frameworks, parables, research narratives
 
 You are free to:
 - Share — copy and redistribute the material in any medium or format
@@ -19,6 +32,8 @@ Disclaimer:
 This portfolio and its contents are provided for demonstration purposes only. 
 Scripts, designs, and strategies are illustrative and not intended for direct 
 operational use without explicit consent from the author.
+
+**For technical implementations of the Phoenix Protocol, see LICENSE-SOVEREIGN.md**
 
 Full License Text:
 https://creativecommons.org/licenses/by-nc/4.0/legalcode
