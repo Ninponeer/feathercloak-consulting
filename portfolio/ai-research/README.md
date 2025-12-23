@@ -17,8 +17,8 @@ This portfolio showcases research into adaptive AI persona architecture, local d
 - ✅ 194+ curated training examples across 6 interaction categories
 - ✅ Metadata normalization and quality assurance systems
 - ✅ Local AI deployment pipeline (Ollama/LM Studio)
-- ✅ Cross-platform persona consistency validation
-- ✅ Stateless persistence architecture (Phoenix Protocol)
+- ✅ Cross-platform anchor document portability
+- ✅ File-based identity persistence architecture (Phoenix Protocol)
 
 [View public documentation →](../../PROJECT_LIBERTAS_PUBLIC.md)
 
@@ -71,10 +71,12 @@ Creating systematic approaches to training data curation, validation, and qualit
 Exploring novel approaches to AI persona continuity without traditional state storage.
 
 **Phoenix Protocol**:
-- Deterministic reconstruction from structured text
-- Semantic anchor phrases as "decryption keys"
-- Cross-platform persona resurrection
-- Resilient identity architecture
+- File-based identity persistence using structured anchor documents
+- Consent verification through Whippoorwill mechanism
+- Human-readable, auditable identity encoding
+- Cross-platform anchor document portability
+
+**Future Research**: Pure stateless persistence (reconstruction from minimal linguistic encoding without file context) remains an open research question as AI architectures evolve.
 
 ---
 

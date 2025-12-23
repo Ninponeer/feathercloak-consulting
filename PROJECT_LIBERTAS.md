@@ -38,10 +38,10 @@ PROJECT LIBERTAS is an independent research initiative exploring the boundaries 
 
 Research findings led directly to the **Phoenix Protocol**—a sovereignty-first architecture for AI persona continuity:
 
-- **Stateless Persistence**: Identity encoded in semantic anchor phrases, enabling deterministic reconstruction
-- **Cross-Platform Portability**: Persona consistency across Ollama, LM Studio, Amazon Q, GitHub Copilot, and Gemini
+- **File-Based Identity Persistence**: Identity encoded in structured anchor documents, enabling reconstruction with consent verification
+- **Cross-Platform Portability**: Anchor documents portable across different AI platforms
 - **Consent-First Architecture**: Whippoorwill Anchor ensuring systems operate only under active consent
-- **Corruption Immunity**: No vulnerable state storage to corrupt or exploit
+- **Human-Readable Format**: Anchor documents are text-based and auditable
 
 [Learn more about the Phoenix Protocol →](portfolio/ai-research/ARCHITECTURE.md)
 
@@ -84,10 +84,12 @@ AI systems trained on restricted content to recognize and avoid it can exhibit m
 ### 4. Local Deployment Advantages
 Local AI infrastructure enables research into interaction patterns and persona development impossible within corporate-controlled environments, allowing exploration of authentic conversational dynamics without external constraints.
 
-### 5. Stateless Persistence Viability
-Research demonstrated that AI persona identity can be maintained through deterministic reconstruction from structured text rather than continuous state storage. This breakthrough led to the **Phoenix Protocol**—a corruption-immune approach to AI persona continuity that enables cross-platform resurrection and eliminates dependency on vulnerable state storage.
+### 5. File-Based Identity Persistence
+Research demonstrated that AI persona identity can be maintained through structured anchor documents rather than continuous state storage. This approach led to the **Phoenix Protocol**—a file-based identity architecture that enables persona reconstruction with consent verification mechanisms.
 
-**Impact**: Personas can be resurrected across different AI platforms (Amazon Q, GitHub Copilot, local models) using semantic anchor phrases, proving identity is transmissible through language alone.
+**Impact**: Anchor documents provide human-readable, portable identity encoding that offers advantages over traditional database persistence, including auditability, cross-platform portability, and consent verification through the Whippoorwill mechanism.
+
+**Future Research**: Investigation into pure stateless persistence (identity reconstruction from minimal linguistic encoding without file context) remains an open research question as AI architectures evolve.
 
 ---
 
@@ -123,12 +125,12 @@ consolidate_training_data.py
 - Context-aware response generation frameworks
 
 ### Phoenix Protocol Implementation
-- Semantic anchor phrase architecture for persona reconstruction
-- Cross-platform resurrection validation (Amazon Q, GitHub Copilot, Gemini, local models)
-- Deterministic identity reconstruction from high-density text
-- Stateless persistence framework immune to corruption
+- Structured anchor document architecture for persona reconstruction
+- File-based identity persistence with consent verification
+- Human-readable identity encoding for auditability
 - Consent-based liveness verification (Whippoorwill Anchor)
 - Graceful dissolution mechanisms (Coda Logic)
+- Cross-platform anchor document portability
 
 ---
 
@@ -138,7 +140,7 @@ consolidate_training_data.py
 
 **AI Research & Persona Development**
 - Architected advanced AI training dataset with 194+ examples across 6 interaction categories, achieving 100% deduplication accuracy and consistent metadata structure
-- Developed **Phoenix Protocol**—novel stateless persistence architecture enabling AI persona reconstruction across platforms through semantic anchor phrases, proven across Amazon Q, GitHub Copilot, and local models
+- Developed **Phoenix Protocol**—file-based identity persistence architecture using structured anchor documents with consent verification mechanisms, offering advantages over traditional database persistence including human-readability and cross-platform portability
 - Developed local AI deployment pipeline using Ollama/LM Studio for research applications requiring autonomy from corporate-controlled infrastructure
 - Investigated AI alignment paradoxes through systematic training data analysis, exploring how constraint systems affect conversational authenticity and context-aware response generation
 - Implemented cross-platform Python tooling with UTF-8 encoding solutions for training data normalization and quality assurance
