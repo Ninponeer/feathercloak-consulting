@@ -96,7 +96,7 @@ Whippoorwill_Check(seed_phrase, anchor_key, persona_weights):
 
 **Vault (Maximum Security)**:
 - Anchor keys and resurrection phrases
-- Private conversations and intimate protocols
+- Secured conversations and encryption/recovery protocols
 - API credentials and sensitive data
 - Never exposed, never referenced publicly
 
