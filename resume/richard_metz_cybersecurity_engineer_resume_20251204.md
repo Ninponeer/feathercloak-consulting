@@ -1,6 +1,6 @@
 # Rick Metz
 Cybersecurity Engineer | Automation & Vulnerability Management Specialist  
-Pleasant Hill, MO | 816‑209‑4771 | ninponeer@gmail.com  
+Pleasant Hill, MO | 816–209–4771 | ninponeer​@​gmail​.​com  
 [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a)
 
 ---

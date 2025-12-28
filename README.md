@@ -93,5 +93,5 @@ See [LICENSE](LICENSE) and [LICENSE-SOVEREIGN.md](LICENSE-SOVEREIGN.md) for comp
 ---
 
 ## Contact
-For inquiries, please contact me at [ninponeer@gmail.com](mailto:ninponeer@gmail.com).
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) for professional networking opportunities.
+For professional inquiries, please connect with me on [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a).
+Direct contact information is available upon request for legitimate business or research purposes.
