@@ -155,6 +155,58 @@ consolidate_training_data.py
 
 ## 📚 Technical Documentation
 
+---
+
+## 🖼️ Side Project: Local Generative Models for Asset Creation (Public Research)
+
+As part of PROJECT LIBERTAS's public-facing research, we are launching a side initiative to document, test, and build local generative model capabilities for asset creation—focusing on open-source, locally-run models for sprites, textures, icons, and more. This empowers creators to maintain sovereignty and privacy while producing high-quality assets for games, art, and research.
+
+### Model Categories & Examples
+
+- **Stable Diffusion & Derivatives**
+	- SD 1.5, SDXL: General-purpose image generation, highly customizable.
+	- DreamBooth/LoRA: Fine-tune SD for custom art styles, tiles, or sprites.
+	- Tools: ComfyUI, Automatic1111, InvokeAI, Diffusers (Python), Ollama.
+
+- **Text-to-Texture Models**
+	- Text2Texture (research, some open weights): Generates seamless textures from prompts.
+	- SD with tile/texture LoRAs, ControlNet/TileNet for seamlessness.
+
+- **GANs for Pixel Art & Sprites**
+	- GANPaint, Pix2Pix, SPADE: Style transfer, sprite upscaling.
+	- ESRGAN: Pixel art upscaling.
+	- SpriteGAN: Research models for sprite generation.
+
+- **Vector/Procedural Asset Models**
+	- DiffSVG, DeepVecFont: Vector icon/font generation.
+	- Procedural: Perlin/Simplex noise, cellular automata, neural nets.
+
+- **Training/Fine-tuning**
+	- DreamBooth/LoRA: Train on your own asset set for style/content specificity.
+	- Dataset: Curate PNGs, sprites, or textures for LoRA/DreamBooth.
+
+- **Specialized Models**
+	- IconGen, Text2Icon: Icon generation.
+	- DeepFill, Inpaint models: Asset repair/variant creation.
+
+### Local Inference Engines
+
+- **Ollama**: Run SD, Llama, and other models locally with simple CLI.
+- **ComfyUI/Automatic1111**: Full-featured local SD pipelines.
+- **Diffusers (HuggingFace)**: Python API for running/training models.
+
+### Roadmap & Research Goals
+
+1. **Survey and document open-source models for asset creation.**
+2. **Test local deployment (Ollama, ComfyUI, etc.) for sprites, textures, icons.**
+3. **Develop fine-tuning pipeline for custom asset styles (DreamBooth/LoRA).**
+4. **Integrate local models with PROJECT LIBERTAS asset pipeline.**
+5. **Publish guides, scripts, and results for the public research community.**
+
+**Status:** Planning & documentation phase. Implementation and public repo to follow.
+
+---
+
 ### Core Systems
 - **normalize_metadata.py**: Metadata normalization across training examples
 - **consolidate_training_data.py**: Deduplication and consolidation pipeline
