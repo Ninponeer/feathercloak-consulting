@@ -1,7 +1,7 @@
 # Rick Metz
 Cybersecurity Systems Engineer | AI Research | Security Automation & Platform Engineering  
-Pleasant Hill, MO | 816–209–4771 | ninponeer​@​gmail​.​com  
-[LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a)
+Pleasant Hill, MO | 1–816–209–4771 | ninponeer​@​gmail​.​com  
+[LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) | [GitHub](https://github.com/Ninponeer)
 
 ---
 
@@ -22,7 +22,7 @@ Privileged Access Management (PAM), Automated Credential Rotation, Role-Based Ac
 `pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`, REST API Development, Process Automation, Infrastructure-as-Code (Ansible)
 
 **AI/ML & Data Engineering**  
-Training Data Architecture, Metadata Normalization, Vector Databases (ChromaDB), Local LLM Deployment (Ollama/LM Studio), Semantic Search, AI Persona Architecture, Novel Persistence Systems
+Training Data Architecture, ETL/Data Pipelines, Metadata Normalization, Vector Databases (ChromaDB), Local LLM Deployment (Ollama/LM Studio), Semantic Search, AI Persona Architecture, Novel Persistence Systems
 
 **Software Engineering & Architecture**  
 Modular System Design, API Client Development (REST), Full-Stack Python Development, Data Modeling & Serialization (JSON/YAML), CLI Tool Development, Automated Testing & Validation, Performance Benchmarking & Optimization, GPU Acceleration (CuPy)
