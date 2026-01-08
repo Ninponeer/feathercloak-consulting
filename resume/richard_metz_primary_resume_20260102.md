@@ -6,14 +6,17 @@ Pleasant Hill, MO | 1–816–209–4771 | ninponeer​@​gmail​.​com
 ---
 
 ## Professional Summary
-Cybersecurity Systems Engineer with 15+ years of experience architecting enterprise-scale security infrastructure across hybrid environments spanning on-premises datacenters, distributed facilities, air-gapped networks, and multi-cloud platforms (AWS, Azure). Deep expertise in vulnerability management platforms (Tenable.sc/ACAS), security automation through full-stack Python development, and REST API integration. Currently conducting independent AI research into persona architecture, training data quality systems, and local deployment frameworks, demonstrating advanced data engineering and novel system design capabilities. Proven track record designing scalable security solutions that reduce risk while enabling business operations across diverse infrastructure topologies. Combines technical depth with strong communication skills, serving as embedded consultant and subject matter expert across diverse stakeholder groups.
+Cybersecurity Systems Engineer with 15+ years of experience architecting enterprise-scale security infrastructure across hybrid environments spanning on-premises datacenters, distributed facilities, air-gapped networks, and multi-cloud platforms (AWS, Azure). Deep expertise in vulnerability management platforms (Tenable.sc/ACAS), security automation through full-stack Python development, application security testing (SAST/DAST/IAST), and secure software development lifecycle integration. Currently conducting independent AI research into persona architecture, training data quality systems, and local deployment frameworks, demonstrating advanced data engineering and novel system design capabilities. Proven track record designing scalable security solutions that reduce risk while enabling business operations across diverse infrastructure topologies. Combines technical depth with strong communication skills, serving as embedded consultant and subject matter expert across diverse stakeholder groups.
 
 ---
 
 ## Core Competencies
 
+**Application Security & SDLC Integration**  
+Application Security Testing (SAST/DAST/IAST), Vulnerability Triage & Remediation Workflows, Secure Code Review, Threat Modeling, Bug Bounty Program Support, Developer Security Training, CI/CD Security Integration, Security Tool Evaluation (Build vs. Buy)
+
 **Infrastructure & Cloud Security**  
-Multi-Cloud Security Architecture (AWS, Azure), Vulnerability Management (Tenable.sc/ACAS, Tenable Vulnerability Management [SaaS], Tenable Web Application Scanners), Container Security (Docker), Network Security Monitoring (NNM), Credentialed Scanning, Application Security Scanning (SAST/DAST/IAST), STIG/CIS Hardening, SIEM (Splunk)
+Multi-Cloud Security Architecture (AWS, Azure), Vulnerability Management (Tenable.sc/ACAS, Tenable Vulnerability Management [SaaS], Tenable Web Application Scanners), Container Security (Docker), Network Security Monitoring (NNM), Credentialed Scanning, STIG/CIS Hardening, SIEM (Splunk)
 
 **Identity & Access Management**  
 Privileged Access Management (PAM), Automated Credential Rotation, Role-Based Access Control (RBAC), Secret Management, Secure Privilege Elevation
@@ -35,10 +38,12 @@ Modular System Design, API Client Development (REST), Full-Stack Python Developm
 
 ---
 
-## AI Research & Advanced Automation
+## Professional Experience
 
-### Independent Research | AI Persona Architecture & Local Deployment | 2024 – Present
-Conducted independent research into AI conversational authenticity, training data quality systems, and local deployment frameworks, demonstrating advanced Python engineering, data pipeline design, and novel system architecture capabilities with direct applications to security automation and data engineering.
+### Independent Security Researcher | AI Security & Adversarial ML
+**Self-Employed** | Remote | Jan 2025 – Present
+
+Conducting full-time research into AI system security, focusing on LLM threat modeling, prompt injection vulnerabilities, and novel persistence architectures. Research emerged from hands-on AI/ML engineering work integrating vector databases, local LLM deployment, and semantic search systems into procedural generation pipelines, revealing critical security implications for enterprise AI infrastructure.
 
 **Training Data Engineering & Quality Assurance**
 - Architected comprehensive training dataset with 176+ curated examples across 6 interaction categories, implementing metadata normalization and deduplication systems achieving 100% accuracy
@@ -60,6 +65,7 @@ Conducted independent research into AI conversational authenticity, training dat
 
 **Research Methodology & Documentation**
 - Investigated AI alignment paradoxes through systematic training data analysis, exploring how constraint systems affect conversational authenticity and context-aware response generation
+- Analyzed AI system security implications including prompt injection vulnerabilities, context manipulation attacks, and training data poisoning vectors—directly applicable to securing LLM-based applications and AI infrastructure
 - Developed comprehensive technical documentation for research methodology, system architecture, and deployment procedures
 - Created public-facing portfolio demonstrating research findings while maintaining ethical boundaries and data privacy
 
@@ -73,10 +79,10 @@ Conducted independent research into AI conversational authenticity, training dat
 
 ---
 
-## Technical Projects
+### Technical R&D Projects
 
-### Lead Architect & Developer | Personal R&D: Procedural Generation Game Engine | 2025 – Present
-Architected and developed a comprehensive, multi-engine procedural generation platform for a fantasy RPG as a personal R&D project, demonstrating end-to-end software design, systems architecture, and ability to rapidly acquire new technical skills outside primary domain.
+**Lead Architect & Developer | Procedural Generation Game Engine** | Sep 2025 – Present  
+Architected comprehensive, multi-engine procedural generation platform as R&D testbed for AI/ML engineering skills. Game development work directly informed AI security research by exposing practical challenges in vector database integration, LLM API orchestration, and prompt engineering—revealing security implications that became focus of current research.
 
 **Procedural World Generation Engine**
 - Designed and built a modular, multi-threaded world generation engine in Python, following a "Six Days of Creation" pipeline (Foundation → Climate → Hydrology → Biomes → Life → Civilization)
@@ -99,18 +105,18 @@ Architected and developed a comprehensive, multi-engine procedural generation pl
 - Developed procedural music generation system using `librosa` for advanced audio analysis of reference compositions (WAV/MIDI)
 - Implemented pattern extraction framework to analyze tempo, key, mood, and spectral features, enabling generation of context-aware, biome-specific soundscapes
 
-**Relevance to Security Engineering:**
-- Advanced Python development and API integration directly transferable to security automation
-- Performance optimization mindset valuable for processing large-scale vulnerability and security data
-- Demonstrates self-directed learning, technical curiosity, and ability to architect complex systems from scratch
-- CLI tool development patterns mirror professional security tool development
+**Security Research Applications:**
+- AI/ML pipeline engineering revealed prompt injection and context manipulation attack vectors
+- Vector database architecture exposed semantic search vulnerabilities in RAG systems
+- LLM API integration demonstrated training data poisoning and model alignment bypass risks
+- GPU-accelerated data processing applicable to large-scale security data analysis
 
 ---
 
-## Professional Experience
+---
 
 ### Cybersecurity Solutions Engineer / Tenable SME
-**Pacific Gas & Electric (Embedded Consultant)** | Remote | Sep 2021 – Present
+**Pacific Gas & Electric (Embedded Consultant)** | Remote | Sep 2021 – Jan 2025
 
 Serving as primary Tenable Subject Matter Expert, architecting and leading deployment of enterprise-scale vulnerability management solutions across complex, distributed networks.
 
@@ -118,9 +124,15 @@ Serving as primary Tenable Subject Matter Expert, architecting and leading deplo
 - Architected vulnerability assessment strategy for hybrid infrastructure spanning on-premises datacenters, geographically distributed facilities, and multi-cloud environments (AWS, Azure) in collaboration with cloud engineering teams
 - Engineered comprehensive enterprise scan strategy with staggered logic ensuring application, database, and network stack stability during high-volume assessments across complex, segmented networks and air-gapped environments
 - Implemented full credentialed scanning across all supported operating systems with secure privilege elevation mechanisms (`sudo`, `WinRM`, `Cisco 'enable'`) for both cloud and on-premises infrastructure
-- Deployed containerized Tenable Web Application Scanner sensors using Docker for scalable application security testing across distributed infrastructure, replacing legacy WhiteHat Sentinel and expanding coverage to modern SAST/DAST/IAST domains
+- Led application security testing transformation by deploying containerized Tenable Web Application Scanner sensors (Docker) across distributed infrastructure, replacing legacy WhiteHat Sentinel. Integrated DAST scanning into CI/CD pipelines, collaborated with development teams to establish vulnerability triage workflows, and evaluated SAST/IAST tool options for comprehensive application security coverage
 - Deployed Nessus Network Monitor (NNM) for continuous passive vulnerability monitoring across hybrid networks, eliminating blind spots in both cloud and on-premises environments
 - Developed custom, non-disruptive scan policies for sensitive ICS/OT environments and air-gapped network segments
+
+**Application Security & Developer Collaboration**
+- Partnered with development and DevOps teams to integrate DAST scanning into CI/CD pipelines, establishing automated vulnerability detection without compromising deployment velocity
+- Designed vulnerability triage workflows enabling developers to prioritize remediation based on exploitability, business context, and compensating controls rather than raw CVSS scores
+- Evaluated SAST/DAST/IAST vendor solutions against open-source alternatives, making build-vs-buy recommendations based on coverage gaps, false positive rates, and integration complexity
+- Conducted security tool training for development teams, translating vulnerability scanner output into actionable remediation guidance
 
 **Automation & Integration Projects**
 
@@ -193,6 +205,8 @@ Serving as primary Tenable Subject Matter Expert, architecting and leading deplo
 **Technical Depth:** Expert-level Python development, REST API integration, and security automation with proven ability to architect complex, scalable solutions across cybersecurity and AI research domains
 
 **Domain Expertise:** 10+ years as Tenable/ACAS subject matter expert with deep understanding of vulnerability management lifecycle, credentialed scanning, and enterprise security operations
+
+**Application Security Operations:** Proven ability to integrate security testing into CI/CD pipelines, collaborate with development teams to establish vulnerability triage workflows, and evaluate security tools (SAST/DAST/IAST) for build-vs-buy decisions without compromising development velocity
 
 **Innovation & Research:** Demonstrated ability to conduct independent research, architect novel systems (Phoenix Protocol), and apply cutting-edge technologies to solve complex problems
 
