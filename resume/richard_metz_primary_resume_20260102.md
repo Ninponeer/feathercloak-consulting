@@ -22,7 +22,7 @@ Multi-Cloud Security Architecture (AWS, Azure), Vulnerability Management (Tenabl
 Privileged Access Management (PAM), Automated Credential Rotation, Role-Based Access Control (RBAC), Secret Management, Secure Privilege Elevation
 
 **Security Automation & Integration**  
-`pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`, REST API Development, Process Automation, Infrastructure-as-Code (Ansible)
+Security Data Pipelines, Log Aggregation & Correlation, Security Observability Infrastructure, `pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`, REST API Development, Process Automation, Infrastructure-as-Code (Ansible)
 
 **AI/ML & Data Engineering**  
 Training Data Architecture, ETL/Data Pipelines, Metadata Normalization, Vector Databases (ChromaDB), Local LLM Deployment (Ollama/LM Studio), Semantic Search, AI Persona Architecture, Novel Persistence Systems
