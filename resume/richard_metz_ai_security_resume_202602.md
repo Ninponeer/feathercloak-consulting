@@ -13,7 +13,7 @@ Cybersecurity Engineer and Independent AI Researcher with 15+ years of experienc
 ## Core Competencies
 
 **AI Security & Red Teaming**
-Adversarial AI Testing, Prompt Injection & Jailbreaking, LLM Persistence Vectors, Alignment Bypass Techniques, Training Data Poisoning Analysis, Local LLM Vulnerability Assessment (Ollama/LM Studio), Vector Database Manipulation (ChromaDB), MITRE ATLAS / OWASP Top 10 for LLM
+Adversarial AI Testing, Prompt Injection & Jailbreaking, LLM Persistence Vectors, Alignment Bypass Techniques, Training Data Poisoning Analysis, Local LLM Vulnerability Assessment (Ollama), Vector Database Manipulation (ChromaDB), MITRE ATLAS / OWASP Top 10 for LLM
 
 **Security Engineering & Automation**
 Vulnerability Management (Tenable.sc/ACAS), Python Security Automation, REST API Exploitation & Integration, Infrastructure-as-Code (Ansible), Container Security (Docker), Network Security Monitoring, SIEM Correlation (Splunk)
@@ -22,7 +22,7 @@ Vulnerability Management (Tenable.sc/ACAS), Python Security Automation, REST API
 Full-Stack Python Development, ETL/Data Pipelines, API Client Development, GPU Acceleration (CuPy), Data Modeling (JSON/YAML), CLI Tool Development
 
 **Languages & Tools**
-**Python** (Expert), **PowerShell**, **Bash**, Git, Docker, Burp Suite (Basic), Nmap, Wireshark, Ollama, LM Studio, ChromaDB, HuggingFace Transformers
+**Python** (Expert), **PowerShell**, **Bash**, Git, Docker, Burp Suite (Basic), Nmap, Wireshark, Ollama, ChromaDB
 
 ---
 

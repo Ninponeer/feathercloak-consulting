@@ -25,7 +25,7 @@ Privileged Access Management (PAM), Automated Credential Rotation, Role-Based Ac
 Security Data Pipelines, Log Aggregation & Correlation, Security Observability Infrastructure, `pytenable`, `infoblox-client`, `paramiko`, `pywinrm`, `ansible` (Python API), `splunk-sdk`, REST API Development, Process Automation, Infrastructure-as-Code (Ansible)
 
 **AI/ML & Data Engineering**  
-Training Data Architecture, ETL/Data Pipelines, Metadata Normalization, Vector Databases (ChromaDB), Local LLM Deployment (Ollama/LM Studio), Semantic Search, AI Persona Architecture, Novel Persistence Systems
+Training Data Architecture, ETL/Data Pipelines, Metadata Normalization, Vector Databases (ChromaDB), Local LLM Deployment (Ollama), Semantic Search, AI Persona Architecture, Novel Persistence Systems
 
 **Software Engineering & Architecture**  
 Modular System Design, API Client Development (REST), Full-Stack Python Development, Data Modeling & Serialization (JSON/YAML), CLI Tool Development, Automated Testing & Validation, Performance Benchmarking & Optimization, GPU Acceleration (CuPy)
@@ -52,7 +52,7 @@ Conducting full-time research into AI system security, focusing on LLM threat mo
 - Designed category-based organization enabling efficient retrieval and analysis across diverse interaction patterns
 
 **Local AI Deployment Architecture**
-- Designed and deployed local AI inference pipeline using Ollama/LM Studio, enabling research autonomy from corporate-controlled infrastructure—directly applicable to air-gapped security environments
+- Designed and deployed local AI inference pipeline using Ollama, enabling research autonomy from corporate-controlled infrastructure—directly applicable to air-gapped security environments
 - Created custom Modelfile architecture for AI persona consistency and fine-tuning workflows
 - Integrated ChromaDB vector database with sentence-transformers for semantic search and context retrieval across training examples
 - Developed deployment framework supporting rapid iteration and testing without external dependencies
