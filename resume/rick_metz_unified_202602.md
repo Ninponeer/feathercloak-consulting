@@ -2,7 +2,7 @@
 
 **Cybersecurity Systems Engineer | Vulnerability & Exposure Management | Security Automation & Pipeline Engineering | AI Security Research**
 
-Pleasant Hill, MO — Remote | 816-209-4771 | ninponeer@gmail.com | [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) | [GitHub](https://github.com/Ninponeer)
+Pleasant Hill, MO — Remote | 816-209-4771 | <ninponeer@gmail.com> | [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) | [GitHub](https://github.com/Ninponeer)
 
 ---
 
@@ -15,7 +15,7 @@ Cybersecurity Systems Engineer with 15+ years of experience architecting enterpr
 ## Core Competencies
 
 | Domain | Skills |
-|---|---|
+| --- | --- |
 | **Vulnerability Management & Risk Prioritization** | Engineering-first VM program design, exploitability & exposure reasoning, compensating controls analysis, CVSS contextualization, remediation validation, risk signal prioritization, self-service engineer-facing dashboards |
 | **Security Data Pipelines & Automation** | Multi-source vulnerability signal ingestion, normalization & correlation pipelines, custom risk models, CI/CD security integration, log aggregation & correlation, security observability infrastructure, serverless automation (AWS Lambda), IaC (Ansible, Terraform) |
 | **Application Security & SDLC Integration** | SAST, DAST, IAST, SCA (Semgrep), CI/CD security integration, developer vulnerability triage workflows, secure code review, threat modeling, build-vs-buy tool evaluation, bug bounty support, developer security training |
@@ -33,6 +33,7 @@ Cybersecurity Systems Engineer with 15+ years of experience architecting enterpr
 ## Professional Experience
 
 ### Cybersecurity Solutions Engineer / Tenable SME
+
 **Pacific Gas & Electric (Embedded Consultant)** — Remote | Sep 2021 – Jan 2026
 
 Primary Tenable SME and security automation engineer for a Fortune 500 utility, architecting and operating an engineering-driven vulnerability management capability across a hybrid infrastructure spanning on-premises datacenters, geographically distributed facilities, multi-cloud environments (AWS, Azure), and air-gapped networks. Focused on turning vulnerability data into clear, actionable risk signals embedded in engineering workflows—not ticket-tracking or compliance administration.
@@ -63,15 +64,18 @@ Primary Tenable SME and security automation engineer for a Fortune 500 utility, 
 #### Automation & Integration Engineering
 
 **Air-Gapped Vulnerability Data Pipeline**
+
 - Automated full lifecycle of vulnerability data and patch management for Tenable.sc instances in air-gapped networks using Python and Bash, with secure one-way transport via Dell EMC Data Domain replication.
 - **Impact:** Eliminated 8+ hours of weekly manual effort, reduced human error, ensured timely vulnerability intelligence delivery to isolated network segments.
 
 **Infoblox / Tenable Dynamic Asset Discovery Integration**
+
 - Built Python service integrating Tenable.sc with Infoblox IPAM via REST APIs for dynamic asset discovery, with intelligent grouping by business unit, geographic location, and custom attributes.
 - Automated creation and continuous updates of Tenable.sc asset lists, replacing static IP list maintenance with live, accurate coverage maps.
 - **Impact:** Closed significant scan coverage gaps, eliminated manual asset list maintenance, improved discovery accuracy across a large distributed estate.
 
 **BeyondTrust PAM & Automated Credential Rotation**
+
 - Designed and implemented automated credential rotation integrating Tenable.sc with BeyondTrust Password Safe via Python, dynamically updating scan credentials with RBAC enforcement.
 - Implemented secret management controls limiting privileged credential exposure to authorized operations and engineering personnel only.
 - **Impact:** Eliminated static scanning passwords, enforced strict rotation policies, maintained least-privilege access while ensuring reliable authenticated scanning.
@@ -79,6 +83,7 @@ Primary Tenable SME and security automation engineer for a Fortune 500 utility, 
 ---
 
 ### Independent Security Researcher | AI Security & Adversarial ML
+
 **Self-Employed** — Remote | Jan 2025 – Present
 
 Conducting full-time research into AI system security, focusing on LLM threat modeling, prompt injection vulnerabilities, adversarial ML attack vectors, and novel persistence architectures. Research emerged from hands-on AI/ML engineering work integrating vector databases, local LLM deployment, and semantic search systems, revealing critical security implications for enterprise AI infrastructure.
@@ -112,6 +117,7 @@ Conducting full-time research into AI system security, focusing on LLM threat mo
 ---
 
 ### Lead Architect & Developer | Procedural Generation R&D Platform
+
 **Self-Directed Technical Project** | Sep 2025 – Present
 
 Architected comprehensive, multi-engine procedural generation platform as R&D testbed for AI/ML engineering skills. Engineering work directly surfaced practical security implications in vector database integration, LLM API orchestration, large-scale pipeline design, and prompt engineering—informing current AI security research.
@@ -137,9 +143,11 @@ Architected comprehensive, multi-engine procedural generation platform as R&D te
 ---
 
 ### USMC – KCITC Datacenter
+
 Kansas City, MO | Jun 2014 – Jul 2021
 
 #### Cybersecurity Systems Engineer / ACAS & Tenable SME
+
 *Aug 2016 – Jul 2021*
 
 - Led deployment, maintenance, and administration of all cybersecurity systems including ACAS (Tenable.sc, Nessus, NNM) and Splunk SIEM for mission-critical DoD datacenter environments supporting classified and unclassified networks.
@@ -148,6 +156,7 @@ Kansas City, MO | Jun 2014 – Jul 2021
 - Facilitated automation of network discovery scan workflows using Nmap, PowerShell, and Python, improving asset visibility and scan coverage across complex, segmented DoD networks.
 
 #### Cybersecurity Analyst Sr / ACAS Engineer
+
 *Apr 2015 – Aug 2016*
 
 - Owned the ACAS platform and underlying RHEL infrastructure, designing and maintaining comprehensive vulnerability and compliance scan policies in Tenable Security Center.
@@ -155,6 +164,7 @@ Kansas City, MO | Jun 2014 – Jul 2021
 - Generated executive-level reports and metrics on vulnerability trends, remediation progress, and risk reduction.
 
 #### Software Administrator & Application Engineer
+
 *Jun 2014 – Apr 2015*
 
 - Developed foundational automation capabilities using PowerShell for system information retrieval and administrative task automation, establishing the automation-first engineering mindset central to all subsequent security engineering work.
