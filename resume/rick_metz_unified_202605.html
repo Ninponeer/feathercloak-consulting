@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rick Metz - Cybersecurity Systems Engineer | Vulnerability & Exposure Management | Security Automation & Platform Engineering">
+  <meta name="author" content="Rick Metz">
+  <title>Rick Metz - Cybersecurity Systems Engineer | Vulnerability &amp; Exposure Management | Security Automation</title>
+  <link rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+  <div class="resume-container">
+
+    <!-- Header -->
+    <header class="resume-header">
+      <h1>Rick Metz</h1>
+      <p class="tagline">Cybersecurity Systems Engineer | Vulnerability &amp; Exposure Management | Security Automation &amp; Platform Engineering</p>
+      <div class="contact-info">
+        <span>Pleasant Hill, MO &mdash; Remote</span>
+        <span>816-209-4771</span>
+        <span><a href="mailto:ninponeer@gmail.com">ninponeer@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/rick-metz-29228421a" target="_blank">LinkedIn</a></span>
+        <span><a href="https://github.com/Ninponeer" target="_blank">GitHub</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2>Professional Summary</h2>
+      <div class="summary">
+        <p>Cybersecurity Systems Engineer with 15+ years of experience across enterprise, critical infrastructure, and DoD environments, including 10+ years as a hands-on Tenable / ACAS SME. Currently engaged as a remote Security Engineer supporting Tenable platform stabilization, cleanup, and an extensive vulnerability remediation campaign. Builds <strong>engineering-first vulnerability management capabilities</strong>: credentialed coverage, safe scan strategy, data pipelines, automation, and remediation prioritization grounded in exploitability, exposure, business impact, and compensating controls. Expert Python developer with deep experience integrating security platforms across hybrid, multi-cloud, air-gapped, and OT / ICS environments. Translates NIST, CIS, FedRAMP, and DoD RMF control intent into scalable engineering practices. Also conducts independent AI security research focused on LLM threat models and resilient system architecture.</p>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2>Professional Experience</h2>
+
+      <!-- Vaco -->
+      <div class="experience-section">
+        <div class="job-header">
+          <h3>Security Engineer / Tenable SME</h3>
+          <p class="job-meta"><strong>Vaco (Contract Consultant)</strong> &mdash; Remote | Mar 2026 &ndash; Present</p>
+        </div>
+        <p class="job-description">Engaged on a six-month remote contract to support an enterprise security engineering program, with primary focus on Tenable platform stabilization, cleanup, and an extensive vulnerability remediation campaign. Current work spans platform engineering, identity-backed access control, risk-based triage workflow design, and centralized Linux infrastructure management architecture.</p>
+        <ul>
+          <li>Executing Tenable platform stabilization and cleanup during an extensive vulnerability remediation campaign, with focus on repeatable scanning, triage, and remediation practices.</li>
+          <li>Configured and implemented RBAC using Intune and Microsoft Entra ID SSO, establishing centralized identity-backed access control for the vulnerability management platform.</li>
+          <li>Designing an MVP integration with Freshservice to route vulnerabilities past SLA and emerging threats, including CISA Known Exploited Vulnerabilities (KEV) and other risk factors, into actionable triage workflows.</li>
+          <li>Designing centralized management architecture for Linux infrastructure using AWX / Ansible Automation Platform (AAP) and Uyuni to support repeatable configuration and remediation operations.</li>
+        </ul>
+      </div>
+
+      <!-- PG&E -->
+      <div class="experience-section">
+        <div class="job-header">
+          <h3>Cybersecurity Solutions Engineer / Tenable SME</h3>
+          <p class="job-meta"><strong>Pacific Gas &amp; Electric (Embedded Consultant)</strong> &mdash; Remote | Sep 2021 &ndash; Jan 2026</p>
+        </div>
+        <p class="job-description">Primary Tenable SME and security automation engineer for a Fortune 500 utility, architecting and operating an engineering-driven vulnerability management capability across a hybrid infrastructure spanning on-premises datacenters, geographically distributed facilities, multi-cloud environments (AWS, Azure), and air-gapped networks. Focused on turning vulnerability data into clear, actionable risk signals embedded in engineering workflows&mdash;not ticket-tracking or compliance administration.</p>
+
+        <div class="job-subsection">
+          <h4>Vulnerability Management &amp; Platform Engineering</h4>
+          <ul>
+            <li>Architected and operated vulnerability management capability with primary focus on reducing real exploit risk&mdash;not raw CVSS scores or ticket closure rates&mdash;across a complex, multi-environment estate including OT/ICS systems.</li>
+            <li>Designed vulnerability triage workflows enabling development and operations teams to prioritize remediation based on <strong>exploitability, business context, and compensating controls</strong>, translating scanner output into actionable risk guidance rather than raw findings dumps.</li>
+            <li>Built and maintained automation pipelines ingesting, normalizing, correlating, and prioritizing vulnerability signals across multiple Tenable sources&mdash;<strong>treating scanner outputs as raw inputs to custom risk models, not authoritative systems of record.</strong></li>
+            <li>Engineered staggered scan logic and custom, non-disruptive policies for sensitive ICS/OT systems, segmented networks, and air-gapped environments.</li>
+            <li>Implemented full credentialed scanning across all supported operating systems with secure privilege elevation (<code>sudo</code>, <code>WinRM</code>, Cisco <code>enable</code>), ensuring comprehensive authenticated vulnerability assessment across heterogeneous infrastructure.</li>
+            <li>Deployed Nessus Network Monitor (NNM) for continuous passive vulnerability monitoring, eliminating blind spots across cloud and on-premises environments between active scan cycles.</li>
+          </ul>
+        </div>
+
+        <div class="job-subsection">
+          <h4>Security Automation &amp; Integration Engineering</h4>
+          <ul>
+            <li>Automated the vulnerability data and patch-management lifecycle for air-gapped Tenable.sc instances using Python and Bash with secure one-way transport, eliminating <strong>8+ hours of weekly manual effort</strong>.</li>
+            <li>Built Python service integrating Tenable.sc with Infoblox IPAM via REST APIs for dynamic asset discovery, with intelligent grouping by business unit, geographic location, and custom attributes.</li>
+            <li>Automated creation and continuous updates of Tenable.sc asset lists, replacing static IP maintenance with live coverage maps and closing significant visibility gaps.</li>
+            <li>Designed and implemented BeyondTrust Password Safe integration for automated credential rotation, eliminating static scanning passwords while preserving least-privilege access.</li>
+          </ul>
+        </div>
+
+        <div class="job-subsection">
+          <h4>Application Security &amp; Advisory</h4>
+          <ul>
+            <li>Led deployment of containerized Tenable Web Application Scanner sensors across distributed infrastructure, replacing legacy WhiteHat Sentinel.</li>
+            <li>Integrated DAST scanning into CI/CD pipelines in partnership with development and DevOps teams, establishing automated vulnerability detection without compromising deployment velocity.</li>
+            <li>Evaluated SAST, DAST, IAST, and SCA solutions against open-source alternatives, producing build-vs-buy recommendations based on coverage, false-positive rates, and integration complexity.</li>
+            <li>Produced executive vulnerability and compliance reporting, represented technical controls during assessments, and trained development teams on actionable remediation workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- USMC -->
+      <div class="experience-section">
+        <div class="job-header">
+          <h3>USMC &ndash; KCITC Datacenter</h3>
+          <p class="job-meta">Kansas City, MO | Jun 2014 &ndash; Jul 2021</p>
+        </div>
+
+        <div class="career-progression">
+          <div class="role">
+            <h4>Cybersecurity Systems Engineer / ACAS &amp; Tenable SME</h4>
+            <p class="job-meta">Aug 2016 &ndash; Jul 2021</p>
+            <ul>
+              <li>Led deployment, maintenance, and administration of all cybersecurity systems including ACAS (Tenable.sc, Nessus, NNM) and Splunk SIEM for mission-critical DoD datacenter environments supporting classified and unclassified networks.</li>
+              <li>Architected and maintained vulnerability management infrastructure ensuring compliance with DoD security requirements (DISA STIGs, RMF)&mdash;directly analogous to FedRAMP High/Moderate control environments.</li>
+              <li>Developed Ansible content to automate STIG baseline configurations and security control enforcement at scale, producing audit-ready evidence through automation rather than manual administration.</li>
+              <li>Facilitated automation of network discovery scan workflows using Nmap, PowerShell, and Python, improving asset visibility and scan coverage across complex, segmented DoD networks.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h4>Cybersecurity Analyst Sr / ACAS Engineer</h4>
+            <p class="job-meta">Apr 2015 &ndash; Aug 2016</p>
+            <ul>
+              <li>Owned the ACAS platform and underlying RHEL infrastructure, designing and maintaining comprehensive vulnerability and compliance scan policies in Tenable Security Center.</li>
+              <li>Collaborated with system administrators and application owners to prioritize and remediate critical vulnerabilities based on exploitability and operational context.</li>
+              <li>Generated executive-level reports and metrics on vulnerability trends, remediation progress, and risk reduction.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h4>Software Administrator &amp; Application Engineer</h4>
+            <p class="job-meta">Jun 2014 &ndash; Apr 2015</p>
+            <ul>
+              <li>Developed foundational automation capabilities using PowerShell for system information retrieval and administrative task automation, establishing the automation-first engineering mindset central to all subsequent security engineering work.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earlier Career -->
+      <div class="earlier-career">
+        <h3>Earlier Career</h3>
+
+        <div class="role-compact">
+          <h4>Tier II Customer Support / Application Systems Analyst I</h4>
+          <p class="role-meta">ScriptPro, Mission, KS | 2011&ndash;2014</p>
+          <ul>
+            <li>Provided Tier 2 support for robotics pharmacy systems (Windows NT/XP/7, Server 2003/2008); installed and configured Cisco ASA/PIX firewalls, 881 EZ-VPN routers, and network switches.</li>
+            <li>Developed interface data extraction/modification rules; wrote SQL queries for database integrity and maintenance.</li>
+          </ul>
+        </div>
+
+        <div class="role-compact">
+          <h4>Production Support Analyst</h4>
+          <p class="role-meta">Cerner, Kansas City, MO | 2010&ndash;2011</p>
+          <ul>
+            <li>Level 2 support for Cerner healthcare software (PharmNET, PathNET, XRPrint Services); CCL/SQL database operations in Cerner Millennium environments.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section>
+      <h2>Core Competencies</h2>
+      <div class="competencies">
+
+        <div class="competency-group">
+          <h4>Vulnerability &amp; Exposure Management</h4>
+          <p>Engineering-first VM program design, credentialed scanning, safe scan strategy, exploitability &amp; exposure reasoning, CVSS contextualization, CISA KEV &amp; emerging-threat triage, remediation validation</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>Security Automation &amp; Platform Engineering</h4>
+          <p>Python automation, REST API integrations, vulnerability data pipelines, Freshservice workflow design, Ansible, AWX / AAP, Uyuni, Terraform, Docker</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>Application &amp; Cloud Security</h4>
+          <p>AWS, Azure, SAST, DAST, IAST, SCA, CI/CD security integration, containerized assessment sensors, threat modeling, build-vs-buy evaluation</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>Security Platforms</h4>
+          <p>Tenable.sc / ACAS, Tenable Vulnerability Management / Tenable One, Nessus, NNM, Tenable Web Application Scanner, Wiz, Prisma Cloud, Lacework, Splunk SIEM, QRadar</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>Identity, Access &amp; Secrets</h4>
+          <p>Microsoft Entra ID SSO, Intune, RBAC, BeyondTrust Password Safe, automated credential rotation, secret management, secure privilege elevation</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>Regulated &amp; Sensitive Environments</h4>
+          <p>DoD RMF, DISA STIGs, NIST 800-53, CIS Benchmarks, FedRAMP patterns, OT / ICS systems, air-gapped networks, audit-ready automation</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>AI / ML &amp; Data Engineering</h4>
+          <p>LLM threat modeling, adversarial ML, RAG / vector databases, local inference, metadata normalization, deduplication, semantic search, GPU acceleration</p>
+        </div>
+
+        <div class="competency-group">
+          <h4>Languages &amp; Tools</h4>
+          <p><strong>Python</strong> (Expert), PowerShell, Bash, Go (familiar), Git, Pytest, VMware, Nmap, Wireshark</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Selected Research & Technical Projects -->
+    <section>
+      <h2>Selected Research &amp; Technical Projects</h2>
+
+      <div class="experience-section">
+        <div class="job-header">
+          <h3>AI Security &amp; Adversarial ML Research</h3>
+          <p class="job-meta"><strong>Independent Research</strong> | Jan 2025 &ndash; Present</p>
+        </div>
+        <ul>
+          <li>Analyzing prompt injection, context manipulation, training data poisoning, and RAG / vector-database attack surfaces in LLM-integrated systems.</li>
+          <li>Built a local inference and semantic-search environment using Ollama, ChromaDB, and sentence-transformers for repeatable offline research.</li>
+          <li>Developed Python data pipelines for metadata normalization, hash-based deduplication, validation, and structured JSON / JSONL dataset production.</li>
+          <li>Designed and documented a deterministic, file-based context-reconstruction architecture to study portability, integrity, and security boundaries across AI platforms.</li>
+        </ul>
+      </div>
+
+      <div class="experience-section">
+        <div class="job-header">
+          <h3>Systems Engineering R&amp;D Platform</h3>
+          <p class="job-meta"><strong>Self-Directed Technical Project</strong> | Sep 2025 &ndash; Present</p>
+        </div>
+        <ul>
+          <li>Built a modular, multi-threaded Python procedural-generation pipeline with validation gates between stages and automatic NumPy CPU fallback for GPU-accelerated CuPy workloads.</li>
+          <li>Achieved <strong>5&ndash;10x performance improvement</strong> in data-processing workloads while preserving deterministic, testable outputs.</li>
+          <li>Architected a multi-provider AI API client factory with rate limiting, error handling, dynamic routing, and CLI-driven batch operations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section>
+      <h2>Education &amp; Certifications</h2>
+
+      <div class="certifications">
+        <ul>
+          <li><strong>CompTIA SecurityX (CASP+)</strong> &mdash; Active 2016&ndash;2028</li>
+          <li><strong>CompTIA Security+</strong> &mdash; Active 2014&ndash;2028</li>
+          <li><strong>CompTIA Network+</strong> &mdash; Active 2014&ndash;2028</li>
+        </ul>
+        <p><em>Credential ID: F0KPXJGKH1V1Y4K2</em></p>
+        <a href="https://www.certmetrics.com/comptia/public/transcript.aspx?transcript=F0KPXJGKH1V1Y4K2" class="verify-link" target="_blank">&#128279; Verify Credentials via CompTIA</a>
+      </div>
+
+      <div class="education">
+        <h4>Associates in Computer Network Systems</h4>
+        <p class="school-meta">ITT Technical Institute &mdash; GPA 4.0</p>
+        <p><em>Highest Academic Honors &bull; National Technical Honor Society &bull; Alpha Beta Kappa Society</em></p>
+      </div>
+    </section>
+
+  </div><!-- /.resume-container -->
+</body>
+</html>
