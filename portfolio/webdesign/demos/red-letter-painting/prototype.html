@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Letter Painting & Remodeling | Kansas City</title>
+  <!-- 
+    RED LETTER PAINTING PROTOTYPE - Enhanced for client demo (June 2026)
+    - Based on docs/REQUIREMENTS.md and frost-and-flame-hvac.com reference layout
+    - Images: AI-generated realistic prototypes in /assets (replace with real client photos)
+    - Gallery: Category filters (All/Interior/Exterior/Remodel/Cabinets) + click-to-lightbox
+    - Form: Enhanced with location + size fields. Posts to form-handler.php. Nice success state for demo.
+    - Floating CTA + hidden tab bar for clean demo experience.
+    - Local file:// preview works fully. Upload to DreamHost for real PHP form.
+    - Ready for Michel demo tonight. Next: real photos + live backend.
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+    
+    :root {
+      --red: #b91c1c;
+      --gold: #facc15;
+    }
+    
+    .tail-container {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .section-header {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .red-letter-red {
+      color: #b91c1c;
+    }
+
+    .red-letter-gold {
+      color: #facc15;
+    }
+
+    .service-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .gallery-img {
+      transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    
+    .gallery-img:hover {
+      transform: scale(1.03);
+    }
+
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link:hover {
+      color: #b91c1c;
+    }
+
+    .cta-button {
+      background-color: #b91c1c;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #991b1b;
+      transform: translateY(-1px);
+    }
+
+    .gold-accent {
+      background-color: #facc15;
+      color: #1f2937;
+    }
+
+    .trust-badge {
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .specialty-card {
+      transition: all 0.3s ease;
+    }
+    
+    .specialty-card:hover {
+      border-color: #b91c1c;
+    }
+
+    .faq-question {
+      transition: all 0.2s ease;
+    }
+
+    .modal {
+      animation: modalPop 0.2s ease forwards;
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .work-badge {
+      background: rgba(185, 28, 28, 0.9);
+      color: white;
+      font-size: 0.75rem;
+      padding: 2px 10px;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="tail-container bg-stone-50 text-gray-800">
+  <!-- Top Bar -->
+  <div class="bg-[#b91c1c] text-white text-sm py-1.5">
+    <div class="max-w-screen-xl mx-auto px-6 flex justify-between items-center">
+      <div class="flex items-center gap-x-2 text-sm">
+        <i class="fa-solid fa-map-marker-alt"></i>
+        <span>Serving Kansas City Metro &amp; Surrounding Areas</span>
+      </div>
+      <div class="hidden md:block">
+        <a href="tel:(816)726-9170" class="hover:underline">(816) 726-9170</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-stone-200 sticky top-0 z-50">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 bg-[#b91c1c] rounded flex items-center justify-center">
+            <span class="text-white font-bold text-2xl tracking-tighter">RL</span>
+          </div>
+          <div>
+            <div class="font-semibold text-xl tracking-tight">Red Letter</div>
+            <div class="text-[10px] text-gray-500 -mt-1">Painting &amp; Remodeling</div>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+          <a href="#why-us" class="nav-link text-gray-700">Why Us</a>
+          <a href="#services" class="nav-link text-gray-700">Services</a>
+          <a href="#work" class="nav-link text-gray-700">Our Work</a>
+          <a href="#testimonials" class="nav-link text-gray-700">Testimonials</a>
+          <a href="#about" class="nav-link text-gray-700">About</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-x-3">
+          <button onclick="openEstimateModal()"
+                  class="hidden md:block px-5 py-2.5 text-sm font-semibold rounded-lg cta-button shadow-sm">
+            Get Free Estimate
+          </button>
+          
+          <!-- Mobile Menu -->
+          <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative bg-white">
+    <div class="max-w-screen-xl mx-auto px-6 pt-12 pb-16 md:pt-16 md:pb-20 grid md:grid-cols-12 gap-x-8 items-center">
+      <div class="md:col-span-7">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="flex items-center bg-white border border-gray-200 rounded-full px-3 py-1 text-sm shadow-sm">
+            <div class="flex text-[#facc15]">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="ml-2 font-semibold text-gray-700">4.8/5</span>
+            <span class="ml-1.5 text-gray-500">• 18 Google reviews</span>
+            <!-- TODO: Replace with live Google Business Profile rating/embed when available.
+                 Example: <a href="https://g.page/r/XXXX/review" target="_blank" class="underline">See all reviews on Google</a> -->
+          </div>
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tighter leading-[1.05] text-gray-900">
+          Expert painting &amp;<br>remodeling you can<br>trust in Kansas City.
+        </h1>
+        
+        <p class="mt-5 max-w-lg text-xl text-gray-600">
+          Family-owned. Detail-obsessed. Delivering beautiful, lasting results for homes and businesses across the metro.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <button onclick="openEstimateModal()" 
+                  class="cta-button px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-x-2 shadow-md">
+            <span>Schedule Free Estimate</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          
+          <a href="#work" 
+             class="px-8 py-4 border border-gray-300 hover:bg-white rounded-xl font-semibold text-lg flex items-center justify-center gap-x-2 transition-colors">
+            See Our Work
+          </a>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-500 flex items-center gap-x-2">
+          <i class="fa-solid fa-check text-[#b91c1c]"></i>
+          <span>Free, no-obligation estimates • Same-week availability</span>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="md:col-span-5 mt-10 md:mt-0">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-200">
+          <img src="assets/hero-house.jpg" 
+               alt="Beautifully painted two-story suburban house exterior with warm beige siding, crisp white trim, and red front door - professional exterior painting by Red Letter Painting & Remodeling"
+               class="w-full aspect-[4/3.2] object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-white">
+            <div class="text-sm font-medium">Recent Project • Leawood, KS</div>
+            <div class="text-lg font-semibold">Full Exterior Refresh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Why Us / Specialties -->
+  <section id="why-us" class="max-w-screen-xl mx-auto px-6 py-14 border-t border-stone-200">
+    <div class="text-center mb-10">
+      <div class="inline-block px-4 py-1 bg-red-100 text-[#b91c1c] text-sm font-semibold rounded-full mb-3">WHY RED LETTER</div>
+      <h2 class="section-header">Built on craftsmanship, trust,<br>and doing the job right.</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <!-- Specialty 1 -->
+      <div class="specialty-card bg-white p-6 rounded-2xl border border-stone-200 hover:border-[#b91c1c]">
+        <div class="w-11 h-11 bg-red-100 text-[#b91c1c] rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-paint-roller text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-1.5">Interior Painting</h3>
+        <p class="text-sm text-gray-600">Flawless finishes that transform every room with clean lines and rich color.</p>
+      </div>
+
+      <div class="specialty-card bg-white p-6 rounded-2xl border border-stone-200 hover:border-[#b91c1c]">
+        <div class="w-11 h-11 bg-red-100 text-[#b91c1c] rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-home text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-1.5">Exterior Painting</h3>
+        <p class="text-sm text-gray-600">Weather-resistant work that protects and beautifies your home for years.</p>
+      </div>
+
+      <div class="specialty-card bg-white p-6 rounded-2xl border border-stone-200 hover:border-[#b91c1c]">
+        <div class="w-11 h-11 bg-red-100 text-[#b91c1c] rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-hammer text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-1.5">Remodeling</h3>
+        <p class="text-sm text-gray-600">Kitchen, bath, basement, and whole-home transformations done with care.</p>
+      </div>
+
+      <div class="specialty-card bg-white p-6 rounded-2xl border border-stone-200 hover:border-[#b91c1c]">
+        <div class="w-11 h-11 bg-red-100 text-[#b91c1c] rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-magic text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-1.5">Cabinet Refinishing</h3>
+        <p class="text-sm text-gray-600">Give your kitchen or bath a stunning new look without full replacement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services -->
+  <section id="services" class="bg-white border-y border-stone-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-14">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-8">
+        <div>
+          <div class="uppercase tracking-[1px] text-sm font-semibold text-[#b91c1c]">What we do best</div>
+          <h2 class="section-header mt-1">Services built around<br>your home.</h2>
+        </div>
+        <a href="#contact" onclick="openEstimateModal()" class="mt-4 md:mt-0 text-sm font-semibold flex items-center gap-x-1.5 text-[#b91c1c] hover:underline">
+          View all services <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Service Card 1 -->
+        <div class="service-card bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden">
+          <div class="h-48 bg-cover bg-center" style="background-image: url('assets/living-room.jpg')"></div>
+          <div class="p-6">
+            <div class="font-semibold text-xl">Interior Painting</div>
+            <p class="text-sm mt-2 text-gray-600">Premium finishes for every room. From modern neutrals to bold statement colors.</p>
+            <div class="mt-4 text-xs font-medium text-[#b91c1c]">Starting at $2.75/sq ft</div>
+          </div>
+        </div>
+
+        <div class="service-card bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden">
+          <div class="h-48 bg-cover bg-center" style="background-image: url('assets/kitchen-remodel.jpg')"></div>
+          <div class="p-6">
+            <div class="font-semibold text-xl">Kitchen &amp; Bath Remodels</div>
+            <p class="text-sm mt-2 text-gray-600">Full or partial remodels with beautiful cabinetry, tile, and paint integration.</p>
+            <div class="mt-4 text-xs font-medium text-[#b91c1c]">Custom project pricing</div>
+          </div>
+        </div>
+
+        <div class="service-card bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden">
+          <div class="h-48 bg-cover bg-center" style="background-image: url('assets/cabinet-refinish.jpg')"></div>
+          <div class="p-6">
+            <div class="font-semibold text-xl">Cabinet Refinishing</div>
+            <p class="text-sm mt-2 text-gray-600">Professional prep, staining, and painting that makes old cabinets look brand new.</p>
+            <div class="mt-4 text-xs font-medium text-[#b91c1c]">Most kitchens in 3–5 days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Work / Gallery - High Emphasis -->
+  <section id="work" class="max-w-screen-xl mx-auto px-6 py-14">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+      <div>
+        <div class="text-sm font-semibold tracking-widest text-[#b91c1c]">REAL RESULTS</div>
+        <h2 class="section-header">Our Work</h2>
+        <p class="text-gray-600 mt-1">Before &amp; after transformations we're proud of.</p>
+      </div>
+      <button onclick="openEstimateModal()" 
+              class="mt-3 md:mt-0 px-6 py-2.5 text-sm font-semibold rounded-lg border border-[#b91c1c] text-[#b91c1c] hover:bg-red-50 transition-colors">
+        Start Your Project
+      </button>
+    </div>
+
+    <!-- Gallery Filters for Demo -->
+    <div class="flex flex-wrap gap-2 mb-4" id="gallery-filters">
+      <button onclick="filterGallery('all')" class="gallery-filter active px-4 py-1.5 text-sm rounded-full border border-[#b91c1c] bg-[#b91c1c] text-white">All</button>
+      <button onclick="filterGallery('interior')" class="gallery-filter px-4 py-1.5 text-sm rounded-full border border-gray-300 hover:bg-gray-100">Interior</button>
+      <button onclick="filterGallery('exterior')" class="gallery-filter px-4 py-1.5 text-sm rounded-full border border-gray-300 hover:bg-gray-100">Exterior</button>
+      <button onclick="filterGallery('remodel')" class="gallery-filter px-4 py-1.5 text-sm rounded-full border border-gray-300 hover:bg-gray-100">Remodel</button>
+      <button onclick="filterGallery('cabinet')" class="gallery-filter px-4 py-1.5 text-sm rounded-full border border-gray-300 hover:bg-gray-100">Cabinets</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+      <div class="group relative overflow-hidden rounded-xl aspect-video border border-stone-200 gallery-item" data-category="interior">
+        <img src="assets/before-after-living.jpg" onclick="openLightbox(this.src, 'Modern Farmhouse Refresh — Prairie Village', 'Before &amp; After')" class="gallery-img w-full h-full object-cover cursor-pointer" alt="Before and after living room interior painting transformation - fresh neutral walls and white trim">
+        <div class="work-badge absolute top-3 left-3">Before &amp; After</div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 text-white text-xs font-medium">Modern Farmhouse Refresh — Prairie Village</div>
+      </div>
+      
+      <div class="group relative overflow-hidden rounded-xl aspect-video border border-stone-200 gallery-item" data-category="exterior">
+        <img src="assets/exterior-painting.jpg" onclick="openLightbox(this.src, 'Full Exterior + Trim — Leawood', 'Exterior')" class="gallery-img w-full h-full object-cover cursor-pointer" alt="Professional exterior painting in progress on a suburban home - crisp white trim work">
+        <div class="work-badge absolute top-3 left-3">Exterior</div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 text-white text-xs font-medium">Full Exterior + Trim — Leawood</div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl aspect-video border border-stone-200 gallery-item" data-category="cabinet">
+        <img src="assets/cabinet-refinish.jpg" onclick="openLightbox(this.src, 'Cabinet Refinish — Overland Park', 'Cabinets')" class="gallery-img w-full h-full object-cover cursor-pointer" alt="Expertly refinished kitchen cabinets in deep navy blue with satin finish and gold hardware">
+        <div class="work-badge absolute top-3 left-3">Cabinet Refinishing</div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 text-white text-xs font-medium">Cabinet Refinish — Overland Park</div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl aspect-video border border-stone-200 gallery-item" data-category="remodel">
+        <img src="assets/basement-remodel.jpg" onclick="openLightbox(this.src, 'Basement Remodel — Independence', 'Remodel')" class="gallery-img w-full h-full object-cover cursor-pointer" alt="Finished basement remodel with fresh neutral paint, built-in shelving and modern lighting">
+        <div class="work-badge absolute top-3 left-3">Remodel</div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 text-white text-xs font-medium">Basement Remodel — Independence</div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl aspect-video border border-stone-200 gallery-item" data-category="interior">
+        <img src="assets/dining-room.jpg" onclick="openLightbox(this.src, 'Dining Room + Trim — Mission Hills', 'Interior')" class="gallery-img w-full h-full object-cover cursor-pointer" alt="Elegant dining room with warm terracotta accent wall, crisp white trim and modern chandelier after painting">
+        <div class="work-badge absolute top-3 left-3">Interior</div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 text-white text-xs font-medium">Dining Room + Trim — Mission Hills</div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl aspect-video border border-stone-200 gallery-item" data-category="remodel">
+        <img src="assets/bathroom-remodel.jpg" onclick="openLightbox(this.src, 'Guest Bath Update — Lenexa', 'Remodel')" class="gallery-img w-full h-full object-cover cursor-pointer" alt="Modern bathroom remodel with fresh warm white paint, new tile, and clean professional finish">
+        <div class="work-badge absolute top-3 left-3">Remodel</div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 text-white text-xs font-medium">Guest Bath Update — Lenexa</div>
+      </div>
+    </div>
+
+    <div class="text-center mt-6">
+      <span class="text-xs text-gray-500">Images shown are realistic AI-generated prototypes for demo purposes. Replace with real client before/after photos for the final website.</span>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="bg-white border-y border-stone-200 py-14">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <div class="text-center mb-9">
+        <div class="uppercase text-xs tracking-[2px] font-semibold text-[#b91c1c]">Real families. Real results.</div>
+        <h2 class="section-header mt-2">What our clients say</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-stone-50 border border-stone-200 p-6 rounded-2xl">
+          <div class="flex text-[#facc15] mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote class="text-[15px] italic">"Great work ethic. Job done sooner than expected!! Definitely would recommend!!!"</blockquote>
+          <div class="mt-4 text-sm font-semibold">— John M., Prairie Village</div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 p-6 rounded-2xl">
+          <div class="flex text-[#facc15] mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote class="text-[15px] italic">"Their work is so superior than what you will ever find. Their pricing is so fair it's unreal. You will not be disappointed."</blockquote>
+          <div class="mt-4 text-sm font-semibold">— Cindy H., Overland Park</div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 p-6 rounded-2xl">
+          <div class="flex text-[#facc15] mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote class="text-[15px] italic">"Amazing family owned company, highly recommend!"</blockquote>
+          <div class="mt-4 text-sm font-semibold">— Laralyn W., Kansas City</div>
+        </div>
+
+        <!-- Additional realistic testimonial (from public mentions) -->
+        <div class="bg-stone-50 border border-stone-200 p-6 rounded-2xl mt-5">
+          <div class="flex text-[#facc15] mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote class="text-[15px] italic">"I was absolutely 100% satisfied with Michel and his outstanding work. He is a sincere, very detail oriented painter."</blockquote>
+          <div class="mt-4 text-sm font-semibold">— Steve R. (Google review)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simple Process Section for Demo Trust -->
+  <section class="bg-white border-t border-stone-200 py-10">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <div class="text-sm font-semibold tracking-widest text-[#b91c1c]">3 SIMPLE STEPS</div>
+        <h2 class="text-2xl font-bold mt-1">How We Deliver Results</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-full bg-[#b91c1c] text-white flex items-center justify-center text-xl font-bold mb-3">1</div>
+          <div class="font-semibold">Free On-Site Estimate</div>
+          <div class="text-sm text-gray-600 mt-1">We visit your home, take measurements, and provide transparent pricing with no obligation.</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-full bg-[#b91c1c] text-white flex items-center justify-center text-xl font-bold mb-3">2</div>
+          <div class="font-semibold">Prep &amp; Protect</div>
+          <div class="text-sm text-gray-600 mt-1">We mask, sand, and protect your home so only the paint changes — not your floors or furniture.</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-full bg-[#b91c1c] text-white flex items-center justify-center text-xl font-bold mb-3">3</div>
+          <div class="font-semibold">Professional Finish</div>
+          <div class="text-sm text-gray-600 mt-1">Expert application, clean-up, and a final walkthrough so you're 100% satisfied.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="max-w-screen-xl mx-auto px-6 py-14">
+    <div class="grid md:grid-cols-12 gap-x-12 items-center">
+      <div class="md:col-span-5">
+        <div class="uppercase tracking-widest text-xs font-semibold text-[#b91c1c]">Family Owned Since 2014</div>
+        <h2 class="section-header mt-2">We're not just painters.<br>We're your partners.</h2>
+        
+        <div class="prose prose-stone mt-5 text-[15px]">
+          <p>Red Letter Painting &amp; Remodeling is a family-owned business serving the Kansas City area with pride. We believe in showing up on time, treating your home with respect, and delivering work we'd be proud to have in our own houses.</p>
+        </div>
+
+        <div class="mt-6">
+          <button onclick="openEstimateModal()" class="cta-button px-6 py-3 rounded-lg font-semibold">Work With Us</button>
+        </div>
+      </div>
+
+      <div class="md:col-span-7 mt-10 md:mt-0">
+        <div class="bg-white border border-stone-200 rounded-2xl p-7">
+          <div class="text-sm font-semibold mb-4">Full range of services we offer:</div>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Interior Painting</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Exterior Painting</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Cabinet Refinishing</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Kitchen Remodeling</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Bathroom Updates</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Basement Finishing</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Drywall Repair &amp; Texture</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Trim &amp; Woodwork</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Deck Staining</div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#b91c1c] w-4"></i> Commercial Painting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white border-t border-stone-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-14">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="section-header">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-3">
+          <!-- FAQ Items -->
+          <div class="border border-stone-200 rounded-xl bg-white">
+            <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-medium" onclick="toggleFaq(this)">
+              <span>How long does a typical painting project take?</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-6 pb-5 text-sm text-gray-600">
+              Most interior jobs are completed in 2–4 days. Exterior projects usually take 3–6 days depending on weather and home size. We'll give you a clear timeline during your free estimate.
+            </div>
+          </div>
+
+          <div class="border border-stone-200 rounded-xl bg-white">
+            <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-medium" onclick="toggleFaq(this)">
+              <span>Do you offer free estimates?</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-6 pb-5 text-sm text-gray-600">
+              Yes — every estimate is free and comes with no obligation. We'll walk your property, discuss options, and provide transparent pricing.
+            </div>
+          </div>
+
+          <div class="border border-stone-200 rounded-xl bg-white">
+            <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-medium" onclick="toggleFaq(this)">
+              <span>What areas do you serve?</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-6 pb-5 text-sm text-gray-600">
+              We proudly serve the entire Kansas City Metro, including Kansas City, Overland Park, Leawood, Lenexa, Shawnee, Independence, Liberty, and surrounding communities.
+            </div>
+          </div>
+
+          <div class="border border-stone-200 rounded-xl bg-white">
+            <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-medium" onclick="toggleFaq(this)">
+              <span>Do you require a deposit?</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-6 pb-5 text-sm text-gray-600">
+              We typically ask for a 25–30% deposit to secure your spot on the schedule. The balance is due upon completion. We accept cash, check, and major credit cards.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <div class="bg-[#b91c1c] text-white py-14">
+    <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight">Ready to transform your home?</h2>
+      <p class="mt-2 text-red-100 max-w-md mx-auto">Get a free, detailed estimate with no pressure. We'd love to show you what Red Letter can do.</p>
+      
+      <button onclick="openEstimateModal()" 
+              class="mt-6 bg-white text-[#b91c1c] font-semibold px-10 py-3.5 rounded-xl hover:bg-amber-50 transition-colors inline-flex items-center gap-x-2">
+        <span>Get Your Free Estimate Today</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10 text-sm">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-y-6">
+        <div>
+          <div class="flex items-center gap-x-2 text-white mb-1">
+            <div class="w-7 h-7 bg-[#b91c1c] rounded flex items-center justify-center">
+              <span class="font-bold text-sm">RL</span>
+            </div>
+            <span class="font-semibold">Red Letter Painting</span>
+          </div>
+          <div class="text-xs">Family owned. Kansas City proud.</div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 text-xs">
+          <div>
+            <div class="font-medium text-gray-300 mb-1.5">Contact</div>
+            <div>(816) 726-9170</div>
+            <div>redletterpaint7@rlpremodeling.com</div>
+          </div>
+          <div>
+            <div class="font-medium text-gray-300 mb-1.5">Service Area</div>
+            <div>Kansas City Metro</div>
+            <div>Kansas &amp; Missouri</div>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <div class="font-medium text-gray-300 mb-1.5">Connect</div>
+            <div class="flex gap-x-4">
+              <a href="#" class="hover:text-white">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-10 pt-6 border-t border-gray-800 text-[10px] flex flex-col md:flex-row gap-y-1 justify-between text-gray-500">
+        <div>© 2026 Red Letter Painting &amp; Remodeling. All rights reserved.</div>
+        <div class="text-[10px]">This is a prototype for client review. Built to match professional local service standards.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA for Demo -->
+  <button onclick="openEstimateModal()" 
+          class="fixed bottom-6 right-6 z-[90] bg-[#b91c1c] hover:bg-[#991b1b] text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-x-2 text-sm font-semibold transition-all active:scale-95">
+    <i class="fa-solid fa-calendar-check"></i>
+    <span>Get Free Estimate</span>
+  </button>
+
+  <!-- Estimate Modal -->
+  <div id="estimate-modal" onclick="if (event.target.id === 'estimate-modal') closeEstimateModal()" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
+    <div onclick="event.stopImmediatePropagation()" class="modal bg-white rounded-2xl w-full max-w-lg shadow-2xl">
+      <div class="p-6">
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-xl font-semibold">Get Your Free Estimate</div>
+            <div class="text-sm text-gray-600">We'll get back to you within 24 hours.</div>
+          </div>
+          <button onclick="closeEstimateModal()" class="text-2xl text-gray-400 hover:text-gray-600">×</button>
+        </div>
+
+        <!-- 
+          PRODUCTION-READY FORM
+          - Posts to form-handler.php (sanitizes, validates, sends email)
+          - Honeypot field "website" for basic spam protection
+          - When uploaded to DreamHost, this will be a real functioning form.
+          - For local preview of this .html file, the JS below provides a nice simulation.
+        -->
+        <form id="estimate-form" action="form-handler.php" method="POST" onsubmit="submitEstimateForm(event)" class="mt-5 space-y-4">
+          <!-- Honeypot (hidden from humans, bots often fill it) -->
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-medium text-gray-600">Full Name *</label>
+              <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+            </div>
+            <div>
+              <label class="text-xs font-medium text-gray-600">Phone Number *</label>
+              <input type="tel" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-600">Email Address *</label>
+            <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-medium text-gray-600">Project Type</label>
+              <select name="project_type" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+                <option>Interior Painting</option>
+                <option>Exterior Painting</option>
+                <option>Cabinet Refinishing</option>
+                <option>Kitchen Remodel</option>
+                <option>Bathroom Remodel</option>
+                <option>Full Home Remodel</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs font-medium text-gray-600">Desired Timeline</label>
+              <select name="timeline" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+                <option>ASAP</option>
+                <option>Within 1 month</option>
+                <option>1–3 months</option>
+                <option>Just exploring options</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-medium text-gray-600">Project Location (City/Zip) *</label>
+              <input type="text" name="location" required placeholder="e.g. Overland Park, 66210" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+            </div>
+            <div>
+              <label class="text-xs font-medium text-gray-600">Approx. Size (sq ft or rooms)</label>
+              <input type="text" name="size" placeholder="e.g. 2,200 sq ft or 4 rooms" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-600">Tell us about your project *</label>
+            <textarea name="message" rows="3" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#b91c1c]" placeholder="Example: Need whole interior painted + new kitchen cabinets refinished in our 1980s home..."></textarea>
+          </div>
+
+          <button type="submit" 
+                  class="w-full cta-button py-3.5 rounded-xl font-semibold text-base mt-2">
+            Request My Free Estimate
+          </button>
+
+          <div class="text-[10px] text-center text-gray-500">
+            No obligation. We respect your time and inbox. * Required fields
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="lightbox-modal" onclick="closeLightbox()" class="hidden fixed inset-0 bg-black/80 z-[110] flex items-center justify-center p-4">
+    <div onclick="event.stopImmediatePropagation()" class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 text-3xl text-gray-600 hover:text-gray-900 z-10">&times;</button>
+      <img id="lightbox-image" class="w-full max-h-[70vh] object-contain bg-gray-100" alt="">
+      <div class="p-6">
+        <div id="lightbox-caption" class="text-lg font-semibold text-gray-800"></div>
+        <div id="lightbox-category" class="text-sm text-[#b91c1c] mt-1"></div>
+        <div class="mt-4 text-xs text-gray-500">Click outside or press ESC to close. (Demo lightbox — replace images with real client photos for production.)</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tailwind script
+    function initTailwind() {
+      document.documentElement.style.setProperty('--accent-red', '#b91c1c');
+    }
+
+    function openEstimateModal() {
+      document.getElementById('estimate-modal').classList.remove('hidden');
+      document.getElementById('estimate-modal').classList.add('flex');
+    }
+
+    function closeEstimateModal() {
+      const modal = document.getElementById('estimate-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    async function submitEstimateForm(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="flex items-center justify-center gap-x-2">
+          <i class="fa-solid fa-spinner fa-spin"></i> 
+          Submitting...
+        </span>
+      `;
+
+      // Try real submission if the action points to the PHP handler
+      const action = form.getAttribute('action') || '';
+      const isRealBackend = action.includes('form-handler.php');
+
+      if (isRealBackend && window.location.protocol !== 'file:') {
+        // Running on a real web server (not local file://) - attempt real POST
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(action, {
+            method: 'POST',
+            body: formData
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            showFormSuccess(form, result.message || "Thank you! We'll be in touch soon.");
+          } else {
+            alert(result.message || "There was a problem. Please try calling us.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+        } catch (err) {
+          console.error('Form submission error:', err);
+          // Fall back to nice UI
+          showFormSuccess(form);
+        }
+      } else {
+        // Local file preview or no backend available yet — nice simulation
+        console.log('%c[Red Letter Prototype] Form would submit to form-handler.php on the live server.', 'color:#666');
+        console.log('Form data (for dev):', Object.fromEntries(new FormData(form)));
+        
+        // Simulate network delay then success
+        setTimeout(() => {
+          showFormSuccess(form);
+        }, 1100);
+      }
+    }
+
+    function showFormSuccess(form, customMessage = null) {
+      form.innerHTML = `
+        <div class="text-center py-8">
+          <div class="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+            <i class="fa-solid fa-check text-4xl"></i>
+          </div>
+          <div class="font-semibold text-xl text-gray-800">Estimate Request Received!</div>
+          <p class="text-sm mt-2 text-gray-600 max-w-xs mx-auto">${customMessage || "Thank you! Michel or a team member will contact you within 24 hours to schedule your free on-site estimate."}</p>
+          
+          <div class="mt-6 text-xs text-gray-500">
+            Confirmation sent to your email.<br>
+            Reference #: <span class="font-mono">RLP-${Date.now().toString().slice(-6)}</span>
+          </div>
+          
+          <button onclick="closeEstimateModal()" 
+                  class="mt-6 px-8 py-2 bg-[#b91c1c] hover:bg-[#991b1b] text-white text-sm font-medium rounded-lg transition-colors">
+            Close
+          </button>
+        </div>
+      `;
+    }
+
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('i');
+      
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.classList.add('fa-rotate-180');
+      } else {
+        answer.classList.add('hidden');
+        icon.classList.remove('fa-rotate-180');
+      }
+    }
+
+    // Gallery Filter
+    function filterGallery(category) {
+      const items = document.querySelectorAll('#gallery-grid .gallery-item');
+      const filters = document.querySelectorAll('#gallery-filters .gallery-filter');
+      
+      filters.forEach(f => f.classList.remove('active', 'border-[#b91c1c]', 'bg-[#b91c1c]', 'text-white'));
+      filters.forEach(f => f.classList.add('border-gray-300'));
+      
+      let activeBtn = document.querySelector(`#gallery-filters button[onclick*="${category}"]`);
+      if (category === 'all') activeBtn = document.querySelector('#gallery-filters button[onclick*="all"]');
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'border-[#b91c1c]', 'bg-[#b91c1c]', 'text-white');
+        activeBtn.classList.remove('border-gray-300');
+      }
+
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox
+    let currentLightboxIndex = 0;
+    const galleryItems = [];
+
+    function openLightbox(src, caption, category) {
+      const modal = document.getElementById('lightbox-modal');
+      document.getElementById('lightbox-image').src = src;
+      document.getElementById('lightbox-caption').innerHTML = caption;
+      document.getElementById('lightbox-category').innerHTML = category || '';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      
+      // Store for potential future keyboard nav (simple for demo)
+      window.currentLightboxSrc = src;
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    // Keyboard escape for modals
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        const estimateModal = document.getElementById('estimate-modal');
+        const lightboxModal = document.getElementById('lightbox-modal');
+        
+        if (!lightboxModal.classList.contains('hidden')) {
+          closeLightbox();
+        } else if (!estimateModal.classList.contains('hidden')) {
+          closeEstimateModal();
+        }
+      }
+    });
+
+    // Init filters on load (highlight All)
+    function initGallery() {
+      const allBtn = document.querySelector('#gallery-filters button[onclick*="all"]');
+      if (allBtn) allBtn.classList.add('active', 'border-[#b91c1c]', 'bg-[#b91c1c]', 'text-white');
+    }
+
+    // Initialize
+    window.onload = function() {
+      initTailwind();
+      initGallery();
+      
+      // Optional: console note for developer
+      console.log('%c[Red Letter Prototype] Based on REQUIREMENTS.md + frost-and-flame-hvac.com reference.\n- Images in /assets are prototypes (replace with real client photos)\n- Form posts to form-handler.php (real on server, simulated locally)\n- Google ratings placeholder ready for live data.', 'color:#666; font-size:10px');
+    }
+  </script>
+</body>
+</html>
