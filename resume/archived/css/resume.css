@@ -1,0 +1,551 @@
+/* =============================================================================
+   Rick Metz - Cybersecurity Engineer Resume Stylesheet
+   Professional, clean, print-friendly design
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   CSS Variables - Easy theming
+   ----------------------------------------------------------------------------- */
+:root {
+  /* Primary Colors */
+  --color-primary: #1a365d;
+  --color-primary-light: #2c5282;
+  --color-accent: #3182ce;
+  --color-accent-hover: #2b6cb0;
+  
+  /* Neutral Colors */
+  --color-text: #2d3748;
+  --color-text-light: #4a5568;
+  --color-text-muted: #718096;
+  --color-border: #e2e8f0;
+  --color-border-dark: #cbd5e0;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7fafc;
+  --color-bg-highlight: #ebf8ff;
+  
+  /* Success/Impact Colors */
+  --color-success: #38a169;
+  --color-success-bg: #f0fff4;
+  
+  /* Typography */
+  --font-sans: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Layout */
+  --max-width: 900px;
+  --border-radius: 6px;
+}
+
+/* -----------------------------------------------------------------------------
+   Reset & Base
+   ----------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: var(--spacing-lg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -----------------------------------------------------------------------------
+   Layout Container
+   ----------------------------------------------------------------------------- */
+.resume-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--color-bg);
+  padding: var(--spacing-xl);
+}
+
+/* -----------------------------------------------------------------------------
+   Header / Contact Info
+   ----------------------------------------------------------------------------- */
+.resume-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-xs) 0;
+  letter-spacing: -0.5px;
+}
+
+.resume-header .tagline {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-primary-light);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm) var(--spacing-lg);
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.contact-info a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.contact-info span::before {
+  content: "•";
+  margin-right: var(--spacing-sm);
+  color: var(--color-border-dark);
+}
+
+.contact-info span:first-child::before {
+  content: "";
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Section Headings
+   ----------------------------------------------------------------------------- */
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Professional Summary
+   ----------------------------------------------------------------------------- */
+.summary {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  background: var(--color-bg-alt);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--color-primary);
+}
+
+/* -----------------------------------------------------------------------------
+   Certifications
+   ----------------------------------------------------------------------------- */
+.certifications {
+  margin-bottom: var(--spacing-lg);
+}
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.certifications li {
+  background: var(--color-bg-alt);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.certifications li strong {
+  color: var(--color-primary);
+}
+
+.verify-link {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-success);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.verify-link:hover {
+  background: #2f855a;
+}
+
+/* -----------------------------------------------------------------------------
+   Core Competencies
+   ----------------------------------------------------------------------------- */
+.competencies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.competency-group {
+  background: var(--color-bg-alt);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.competency-group h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-sm) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.competency-group p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+/* -----------------------------------------------------------------------------
+   Experience Sections
+   ----------------------------------------------------------------------------- */
+.experience-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.job-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.job-header h3 {
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.job-meta {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.job-meta strong {
+  color: var(--color-text);
+}
+
+.job-description {
+  margin: var(--spacing-md) 0;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* Sub-sections within jobs */
+.job-subsection {
+  margin: var(--spacing-lg) 0;
+}
+
+.job-subsection h4 {
+  color: var(--color-primary-light);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* -----------------------------------------------------------------------------
+   Lists
+   ----------------------------------------------------------------------------- */
+ul {
+  margin: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+li::marker {
+  color: var(--color-accent);
+}
+
+/* -----------------------------------------------------------------------------
+   Projects Section
+   ----------------------------------------------------------------------------- */
+.project {
+  background: var(--color-bg-alt);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--color-accent);
+}
+
+.project h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.project p {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: 0.95rem;
+}
+
+.project ul {
+  margin: var(--spacing-sm) 0;
+}
+
+.project li {
+  font-size: 0.95rem;
+}
+
+/* Impact callouts */
+.impact {
+  background: var(--color-bg-highlight);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+.impact strong {
+  color: var(--color-success);
+}
+
+/* -----------------------------------------------------------------------------
+   USMC Progression Section
+   ----------------------------------------------------------------------------- */
+.career-progression {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  border-left: 3px solid var(--color-border);
+  margin-left: var(--spacing-sm);
+}
+
+.career-progression .role {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.career-progression .role:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.career-progression .role::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--spacing-lg) - 8px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+/* -----------------------------------------------------------------------------
+   Earlier Career
+   ----------------------------------------------------------------------------- */
+.earlier-career .role-compact {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-bg-alt);
+  border-radius: var(--border-radius);
+}
+
+.earlier-career h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: 1rem;
+}
+
+.earlier-career .role-meta {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.earlier-career ul {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Education
+   ----------------------------------------------------------------------------- */
+.education {
+  background: var(--color-bg-alt);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.education h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--color-primary);
+}
+
+.education .school-meta {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.education ul {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+}
+
+/* -----------------------------------------------------------------------------
+   Code/Technical Terms
+   ----------------------------------------------------------------------------- */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--color-bg-alt);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  color: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+}
+
+/* -----------------------------------------------------------------------------
+   Print Styles
+   ----------------------------------------------------------------------------- */
+@media print {
+  body {
+    font-size: 11pt;
+    padding: 0;
+    background: white;
+  }
+  
+  .resume-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .resume-header {
+    border-bottom-width: 2px;
+  }
+  
+  h2 {
+    page-break-after: avoid;
+    border-bottom-width: 1px;
+  }
+  
+  h3, h4 {
+    page-break-after: avoid;
+  }
+  
+  .project, .competency-group, .role-compact, .education {
+    break-inside: avoid;
+  }
+  
+  .verify-link {
+    background: none;
+    color: var(--color-accent);
+    padding: 0;
+    border: none;
+  }
+  
+  .verify-link::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+  
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  .career-progression {
+    border-left-width: 2px;
+  }
+  
+  .career-progression .role::before {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive
+   ----------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-md);
+  }
+  
+  .resume-container {
+    padding: var(--spacing-md);
+  }
+  
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .contact-info span::before {
+    content: "";
+    margin: 0;
+  }
+  
+  .competencies {
+    grid-template-columns: 1fr;
+  }
+  
+  .certifications ul {
+    flex-direction: column;
+  }
+}
