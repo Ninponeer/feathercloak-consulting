@@ -1,0 +1,6 @@
+# For best compatibility, use Python 3.10–3.12
+# Some dependencies may not work with Python 3.14+
+langchain
+langchain-ollama
+moto
+boto3

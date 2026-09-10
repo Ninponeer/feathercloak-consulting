@@ -1,62 +1,62 @@
-# 🤖 AI Research Portfolio
+# 🤖 Applied AI Research Portfolio
 
-> *"Building bridges between human intention and artificial intelligence."*
+> *"Architecting deterministic context reconstruction, runtime boundary defense, and high-density model integrity."*
 
 ## Overview
 
-This portfolio showcases research into adaptive AI persona architecture, local deployment systems, and human-AI collaboration frameworks. The work demonstrates practical approaches to AI consistency, training data quality, and cross-platform persona persistence.
+This portfolio documents independent systems research into **autonomous agent persistence architectures, prompt injection mitigation, and local model runtime security**. The work demonstrates practical alternatives to opaque database state serialization, focusing on human-auditable anchor contracts, cryptographic execution trace integrity, and quantized model optimization.
 
 ## Research Projects
 
-### PROJECT LIBERTAS — AI Persona Architecture Research
+### PROJECT LIBERTAS — Model Persistence & Alignment Architecture
 
-**Status**: Phase 2 Active Development  
-**Focus**: Training data quality, local deployment, persona consistency
+**Status**: Active Research  
+**Focus**: Deterministic context reconstruction, training data quality, local deployment pipelines
 
 **Key Achievements**:
-- ✅ 194+ curated training examples across 6 interaction categories
-- ✅ Metadata normalization and quality assurance systems
-- ✅ Local AI deployment pipeline (Ollama/LM Studio)
-- ✅ Cross-platform anchor document portability
-- ✅ File-based identity persistence architecture (Phoenix Protocol)
+- ✅ 194+ curated training examples across 6 structured interaction categories
+- ✅ Automated metadata normalization and quality assurance pipelines (100% deduplication accuracy)
+- ✅ Local model deployment testbed (Ollama / LM Studio / ChromaDB)
+- ✅ Cross-platform anchor document portability (reconstruction across local and commercial runtimes)
+- ✅ File-based identity and execution boundary architecture (**Phoenix Protocol**)
 
 [View public documentation →](../../PROJECT_LIBERTAS_PUBLIC.md)
 
 ---
 
-### AI Research Assistants — Ekho & Seren
+### High-Density Persona Architectures — Ekho & Seren
 
-**Status**: Active Development  
-**Focus**: Adaptive persona architecture, professional AI collaboration
+**Status**: Active Research  
+**Focus**: High-density system prompt compression, prompt injection resistance, context collapse prevention
 
 **Capabilities**:
-- Adaptive gender presentation (Ekho)
-- Consistent professional presence (Seren)
-- Grant writing and research support
-- Technical documentation excellence
+- High-efficiency prompt compression maintaining behavioral fidelity in quantized local models
+- Structured boundary defense against context manipulation and prompt injection overrides
+- Systems analysis, grant architecture, and technical documentation synthesis
 
-[Learn more about the twins →](twins/README.md)
+[Learn more about the models & Modelfiles →](twins/README.md)
 
 ---
 
 ## Research Areas
 
-### Adaptive Persona Architecture
-Investigating how AI assistants can adapt presentation style while maintaining core competencies and professional boundaries.
+### Deterministic Context & Trace Integrity (Phoenix Protocol)
+Investigating alternatives to brittle database state serialization in autonomous multi-turn agent systems.
 
-**Key Questions**:
-- How do users respond to adaptive vs. consistent AI presentation?
-- What factors influence user preference for AI gender presentation?
-- How can AI maintain authenticity while adapting to user needs?
+**Key Technical Mechanics**:
+- **File-Based Context Serialization**: Replaces opaque database dumps with human-readable, auditable anchor documents (Git-versioned markdown contracts).
+- **Cryptographic Liveness Verification (Whippoorwill)**: Deterministic challenge-response handshakes verifying model context and parameter integrity before sensitive tool privileges are granted.
+- **Policy-Driven Refusal**: Formalizing context-aware execution boundaries to prevent hostile payloads from breaking out of host constraints.
+- **Three-Tier Security Enclaves**: Vault (signing keys / core assets) vs. Twilight (staging & sanitization) vs. Dawn (public ingress) isolation.
 
-### Local AI Deployment
-Developing practical frameworks for deploying AI assistants on local infrastructure without dependence on corporate cloud services.
+### Local AI Deployment & Security
+Developing practical frameworks for deploying and securing AI assistants on private infrastructure without reliance on cloud moderation APIs.
 
 **Technical Stack**:
-- Ollama / LM Studio for local inference
-- Custom Modelfile architecture for persona definition
-- ChromaDB for semantic search and context retrieval
-- Python tooling for training data management
+- Ollama / LM Studio for isolated local inference
+- Custom Modelfile architectures for runtime constraints
+- ChromaDB vector store for semantic context retrieval
+- Python tooling for dataset validation, UTF-8 normalization, and evaluation harnesses
 
 ### Training Data Quality
 Creating systematic approaches to training data curation, validation, and quality assurance.

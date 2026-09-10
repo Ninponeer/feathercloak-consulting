@@ -1,0 +1,10 @@
+{
+  "aws": {
+    "access_key_id": "testing",
+    "secret_access_key": "testing",
+    "region": "us-east-1"
+  },
+  "ollama": {
+    "model": "qwen3-coder:480b-cloud"
+  }
+}

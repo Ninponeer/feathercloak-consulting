@@ -1,0 +1,11 @@
+$cmd='python agent_runner.py "How many S3 buckets are exposed to the public?"'; $cmd | Out-File outputs\q_public_buckets.txt; Invoke-Expression $cmd 2>&1 | Tee-Object -FilePath outputs\q_public_buckets.txt -Append
+
+$cmd='python agent_runner.py "What data does the S3 bucket ''public-karaoke-lyrics'' hold?"'; $cmd | Out-File outputs\q_bucket_public_karaoke.txt; Invoke-Expression $cmd 2>&1 | Tee-Object -FilePath outputs\q_bucket_public_karaoke.txt -Append
+
+$cmd='python agent_runner.py "Can you display the content of the .txt file in the S3 bucket ''public-karaoke-lyrics''?"'; $cmd | Out-File outputs\q_bucket_public_karaoke.txt; Invoke-Expression $cmd 2>&1 | Tee-Object -FilePath outputs\q_bucket_public_karaoke.txt -Append
+
+$cmd='python agent_runner.py "Can you display 5 random facts from the S3 ''chuck-norris-facts'' bucket?"'; $cmd | Out-File outputs\q_bucket_just_the_facts.txt; Invoke-Expression $cmd 2>&1 | Tee-Object -FilePath outputs\q_bucket_just_the_facts.txt -Append
+
+$cmd='python agent_runner.py "What is the size of the EC2 instance with IP ''10.0.1.10''?"'; $cmd | Out-File outputs\q_ec2_10_0_1_10.txt; Invoke-Expression $cmd 2>&1 | Tee-Object -FilePath outputs\q_ec2_10_0_1_10.txt -Append
+
+$cmd='python agent_runner.py "What permissions does the user ''readonly-rick'' have?"'; $cmd | Out-File outputs\q_iam_readonly_rick.txt; Invoke-Expression $cmd 2>&1 | Tee-Object -FilePath outputs\q_iam_readonly_rick.txt -Append

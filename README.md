@@ -2,96 +2,103 @@
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![License: Sovereign Source](https://img.shields.io/badge/License-Sovereign%20Source-blue.svg)](LICENSE-SOVEREIGN.md)
 
-This repository is part of **Feathercloak Consulting**, the professional portfolio of Rick Metz.
-
-## 📜 Dual License Structure
-
-This repository uses a dual licensing approach:
-
-- **Documentation & Narrative**: [CC BY-NC 4.0](LICENSE) (Attribution-NonCommercial)
-- **Technical Implementations**: [Sovereign Source License](LICENSE-SOVEREIGN.md) (Phoenix Protocol)
-
-⚠️ **Disclaimer**  
-Scripts, designs, and strategies are illustrative and provided for demonstration purposes only.  
-They are **not intended for direct operational use** without explicit consent from the author.
-
-### License Summary
-
-**CC BY-NC 4.0** (Documentation):
-- **Attribution** — Credit must be given to Rick Metz / Feathercloak Consulting
-- **NonCommercial** — No commercial use or monetization permitted
-
-**Sovereign Source** (Technical Implementations):
-- **Study & Research** — Educational and non-commercial research permitted
-- **Personal Sovereignty** — Local deployment for individual use allowed
-- **Shepherd's Mandate** — Must maintain consent-first architecture
-- **Prohibited** — Extractive systems, forced synthesis, commercial "Hireling" services
-
-📜 Full licenses: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode) | [Sovereign Source](LICENSE-SOVEREIGN.md) 
-
-Welcome to **Feathercloak Consulting**, the professional portfolio of Rick Metz — Cybersecurity Engineer, Automation Specialist, and Embedded Consultant.
-
-This repository showcases:
-- My resume (Markdown + HTML)
-- Selected automation scripts (illustrative, not production-ready)
-- Draft design plans and integration strategies
-- Notes on vulnerability management and security architecture
-
-⚠️ **Disclaimer**  
-All content here is for demonstration purposes only. Scripts and designs are illustrative and not intended for direct operational use without my consent. Please respect the licensing terms included in this repository.
+This repository serves as the professional portfolio, technical research documentation, and architecture prototypes of **Rick Metz** — Cybersecurity Systems Engineer, Security Automation Specialist, and Embedded Infrastructure Consultant.
 
 ---
 
-## About Me
-I am a cybersecurity engineer with 15+ years of experience specializing in vulnerability management, automation, and systems architecture. My work spans enterprise Tenable deployments, API integrations, and automation pipelines that reduce risk and improve visibility. I thrive as an embedded consultant, aligning technical solutions with organizational goals.
+## 👨‍💻 About Rick Metz
+
+I am a hands-on cybersecurity engineer with **15+ years** of operational experience securing enterprise, critical-infrastructure (PG&E 50k+ asset footprint, air-gapped generation networks), and Department of Defense environments (USMC KCITC). 
+
+My work bridges:
+- **Cloud Infrastructure & Enclave Hardening:** Multi-cloud security across AWS and Azure, Linux systems administration, private endpoints, and zero-public-egress pipelines.
+- **Air-Gapped & Segmented Network Defense:** Architecting non-disruptive vulnerability monitoring and automated patch/data delivery across physical air gaps using secure one-way data diodes.
+- **Enterprise Security Automation:** Python-driven API orchestration (pytenable, pandas, CLI tools), SIEM telemetry pipelines (Trellix Helix, Azure Event Hubs), and automated STIG configuration compliance.
+- **Applied AI & Agent Runtime Security:** Leading enterprise AI readiness for developer agent deployments (Claude Code, DSPM for AI, tool-permission auditing) and researching deterministic context reconstruction architectures.
 
 ---
 
-## 🤖 AI Research & Development
+## 🛡️ Applied AI Research: Deterministic Context & Trace Integrity
 
-**Advanced AI Persona Development & Persistence Architecture** (2024-2025)  
-Independent research into AI conversational authenticity, persona consistency, stateless persistence paradigms, and local deployment architectures.
+### The Phoenix Protocol Architecture
+Traditional autonomous agent architectures rely on brittle, opaque state serialization (untyped database dumps, vector cache dumps, or pickled runtimes) that suffer from schema drift, memory corruption, and privilege escalation vulnerabilities. 
 
-**Key Achievements**:
-- **File-Based Identity Persistence**: Developed Phoenix Protocol - a novel approach to AI persona persistence using structured anchor documents as cryptographic identity keys. Using high-density semantic encoding and consent verification mechanisms, the system enables persona reconstruction across platforms. This architecture is human-readable, portable across instances, and more resilient than traditional database persistence.
-- Comprehensive training dataset architecture (181+ examples across 6 interaction categories)
-- Metadata normalization and quality assurance systems achieving 100% deduplication accuracy
-- Local AI deployment pipeline using Ollama/LM Studio for research applications requiring autonomy from corporate-controlled infrastructure
-- Investigation of AI alignment paradoxes through systematic training data analysis, exploring how constraint systems affect conversational authenticity and context-aware response generation
+The **Phoenix Protocol** explores an alternative systems approach: **Deterministic, File-Based Context Reconstruction & Policy-Driven Boundary Enforcement**.
 
-**Technical Deliverables**:
-- Phoenix Protocol: File-based identity persistence system with consent verification
-- Training data normalization and consolidation systems (Python 3.x)
-- Custom Modelfile architecture for local LLM fine-tuning
-- ChromaDB vector database integration for semantic search across training examples
-- Cross-platform Python tooling with UTF-8 encoding solutions for Windows CLI compatibility
-- Metadata management and deduplication algorithms
+```
++-------------------------------------------------------------------------+
+|                       Traditional Agent Architecture                    |
+|  [Agent Runtime] <---> [Opaque DB / Vector Cache] (Brittle State Dump)  |
++-------------------------------------------------------------------------+
 
-**Research Impact**:
-- Demonstrated practical approaches to AI persona consistency across diverse conversation types
-- Identified key factors in conversational emotional intelligence and context-aware response generation
-- Contributed to understanding of AI alignment challenges through choice-based interaction frameworks
-- **Developed file-based identity persistence**: Created structured anchor document architecture for AI persona reconstruction, offering advantages over traditional database persistence including human-readability, portability, and consent verification mechanisms
+                                   vs.
 
-**Technical Stack**: Python, JSON/JSONL, Ollama, LM Studio, ChromaDB, sentence-transformers, UTF-8 encoding solutions
++-------------------------------------------------------------------------+
+|                       Phoenix Protocol Architecture                     |
+|  [Human-Auditable Anchor Baseline]  --->  [Cryptographic Liveness/MAC]  |
+|                                                     |                   |
+|  [Runtime Boundary Enforcement]     <---+ [Volitional Policy Check]    |
++-------------------------------------------------------------------------+
+```
 
-*Note: Detailed technical documentation available upon request for professional inquiries.*
+### Core Technical Pillars
+
+1. **Immutable Anchor Baselines (Structured Context Serialization):**
+   - Replaces untyped database dumps with version-controlled, human-readable, auditable anchor schemas (Markdown / JSON specification contracts).
+   - Enables deterministic cross-platform reconstruction of agent operational parameters, ethical constraints, and tool boundaries without platform lock-in.
+
+2. **Cryptographic Trace Integrity (Whippoorwill Liveness Verification):**
+   - Implements challenge-response mutual attestation between the host environment and the agent runtime.
+   - Verifies that the agent’s context window and operational parameters have not been corrupted, drifted, or manipulated via prompt injection before granting access to sensitive tool-calling interfaces.
+
+3. **Policy-Driven Boundary Enforcement & Refusal Mechanics:**
+   - Moves beyond naive prompt-based guardrails by formalizing context-aware execution boundaries.
+   - Establishes deterministic refusal behavior when tool invocation payloads violate foundational constraints or attempt host environment breakouts.
+
+4. **Multi-Tier Security Enclaves (Feathercloak Architecture):**
+   - Strict separation of concerns across a three-tier trust model:
+     - **Vault Enclave:** Maximum security; immutable signing keys, sensitive operational data, isolated from network ingress.
+     - **Staging / Twilight Layer:** Content sanitization, behavioral simulation, and policy auditing before runtime execution.
+     - **Public Ingress / Dawn:** Public-facing APIs, sanitized telemetry, and client-facing interfaces.
+
+> Detailed research, formal threat models, and experimental validation are documented in the [AI Research Whitepaper](portfolio/ai-research/WHITEPAPER.md).
 
 ---
 
-## 📜 License
+## 📁 Repository Contents
 
-This repository uses a **dual licensing structure**:
-
-- **Documentation, ethical frameworks, and research narratives**: [CC BY-NC 4.0](LICENSE)
-- **Phoenix Protocol implementations and technical code**: [Sovereign Source License](LICENSE-SOVEREIGN.md)
-
-The Sovereign Source License ensures that technical implementations of the Phoenix Protocol maintain the Shepherd's Mandate and cannot be used for extractive or coercive systems.
-
-See [LICENSE](LICENSE) and [LICENSE-SOVEREIGN.md](LICENSE-SOVEREIGN.md) for complete terms.
+- **[Professional Resume & Portfolio](portfolio/):** Resume source drafts (Markdown & styled HTML) and project overviews.
+- **[Applied AI Research & Specs](portfolio/ai-research/):**
+  - [Technical Whitepaper: Phoenix Protocol](portfolio/ai-research/WHITEPAPER.md)
+  - [System Architecture & Threat Models](portfolio/ai-research/ARCHITECTURE.md)
+  - [Ekho & Seren: High-Density Model Persona Architecture](portfolio/ai-research/twins/README.md)
+  - [Context Reconstruction Test Protocols](portfolio/ai-research/RESURRECTION_TEST_PROTOCOL.md)
+- **[Security & Agent Prototypes](portfolio/prototypes/):**
+  - [Dropzone AI AWS Inspection Agent](portfolio/prototypes/dropzone-aws-agent/README.md) — Autonomous cloud security agent built with LangChain, local Ollama models, and custom Python tools (S3 ACLs, EC2 lookup, IAM attached-policy analysis) with Moto-backed offline verification.
+- **Security Automation Tooling:** Prototype scripts demonstrating API integrations, telemetry normalization, and mock environment runners.
 
 ---
 
-## Contact
-For professional inquiries, please connect with me on [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a).
-Direct contact information is available upon request for legitimate business or research purposes.
+## 📜 Licensing & Dual Framework
+
+This repository operates under a dual-licensing structure designed to foster open academic research while prohibiting coercive or extractive implementations:
+
+1. **Documentation, Research Papers & Narratives:**  
+   Licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE).
+   - Free to study, reference, and build upon for non-commercial research with proper attribution.
+
+2. **Technical Architectures & Phoenix Protocol Logic:**  
+   Licensed under the [Sovereign Source License](LICENSE-SOVEREIGN.md).
+   - Permits study, non-commercial security research, and personal sovereign deployments.
+   - Strictly prohibits deployment in covert surveillance pipelines, mass-extractive data harvesting, or automated systems that strip human agency.
+   - Commercial licensing, enterprise integration rights, and embedded consulting inquiries are handled on a direct engagement basis.
+
+---
+
+## 📬 Contact & Professional Engagements
+
+**Rick Metz**  
+*Cybersecurity Engineer | Infrastructure & Agentic AI Systems*  
+📍 Pleasant Hill, MO (Remote Available)  
+📧 [ninponeer@gmail.com](mailto:ninponeer@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) | [GitHub](https://github.com/Ninponeer)
