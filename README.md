@@ -101,4 +101,4 @@ This repository operates under a dual-licensing structure designed to foster ope
 *Cybersecurity Engineer | Infrastructure & Agentic AI Systems*  
 📍 Pleasant Hill, MO (Remote Available)  
 📧 [ninponeer@gmail.com](mailto:ninponeer@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) | [GitHub](https://github.com/Ninponeer)
+🔗 [LinkedIn](https://www.linkedin.com/in/rick-metz-29228421a) | [GitHub](https://github.com/Ninponeer) | [Credly Verified Badges](https://www.credly.com/users/rick-metz)
