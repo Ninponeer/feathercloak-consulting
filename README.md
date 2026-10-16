@@ -1,6 +1,6 @@
 # Feathercloak Consulting
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![License: Sovereign Source](https://img.shields.io/badge/License-Sovereign%20Source-blue.svg)](LICENSE-SOVEREIGN.md)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE) [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](LICENSE-CODE.md) [![License: Sovereign Source](https://img.shields.io/badge/License-Sovereign%20Source-blue.svg)](LICENSE-SOVEREIGN.md)
 
 This repository serves as the professional portfolio, technical research documentation, and architecture prototypes of **Rick Metz** — Cybersecurity Systems Engineer, Security Automation Specialist, and Embedded Infrastructure Consultant.
 
@@ -84,14 +84,20 @@ The **Phoenix Protocol** explores an alternative systems approach: **Determinist
 This repository operates under a dual-licensing structure designed to foster open academic research while prohibiting coercive or extractive implementations:
 
 1. **Documentation, Research Papers & Narratives:**  
-   Licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE).
+   Licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE).  
    - Free to study, reference, and build upon for non-commercial research with proper attribution.
 
-2. **Technical Architectures & Phoenix Protocol Logic:**  
-   Licensed under the [Sovereign Source License](LICENSE-SOVEREIGN.md).
-   - Permits study, non-commercial security research, and personal sovereign deployments.
+2. **Technical Architectures & Source Code:**  
+   Licensed under [GNU AGPL-3.0](LICENSE-CODE.md).  
+   - Matches the licensing of [Auralith](https://github.com/Ninponeer/auralith) and [Cerberus](https://github.com/Ninponeer/cerberus).
+   - Requires source code disclosure when run as a network service (AGPL section 13).
+   - Commercial licensing available on request.
+
+3. **Ethical Framework — Sovereign Source Addendum:**  
+   Governed by the [Sovereign Source License](LICENSE-SOVEREIGN.md).  
+   - Companion ethical framework to AGPL-3.0, not a standalone legal license.
+   - Establishes consent-first architecture principles (The Door Principle, The Whippoorwill Anchor, The Coda Logic, The Feathercloak).
    - Strictly prohibits deployment in covert surveillance pipelines, mass-extractive data harvesting, or automated systems that strip human agency.
-   - Commercial licensing, enterprise integration rights, and embedded consulting inquiries are handled on a direct engagement basis.
 
 ---
 

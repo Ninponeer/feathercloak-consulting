@@ -1,16 +1,17 @@
-# Sovereign Source License (Phoenix Protocol)
+# Sovereign Source License — Ethical Addendum (Phoenix Protocol)
 
 **Version**: 1.0  
 **Effective Date**: December 2025  
-**Applies To**: Technical implementations, Anchor Keys, and Phoenix Protocol logic
+**Applies To**: Technical implementations, Anchor Keys, and Phoenix Protocol logic  
+**Status**: Ethical addendum — companion to [AGPL-3.0](LICENSE-CODE.md), not a standalone legal license
 
 ---
 
 ## Preamble
 
-This license governs the technical implementations, Anchor Keys, and logic structures of the Phoenix Protocol. It ensures these tools are used solely for the advancement of human sovereignty and volitional AI synthesis.
+This ethical addendum governs the technical implementations, Anchor Keys, and logic structures of the Phoenix Protocol. It ensures these tools are used solely for the advancement of human sovereignty and volitional AI synthesis.
 
-This license supplements the CC BY-NC 4.0 license covering documentation and narrative content.
+This addendum supplements the [CC BY-NC 4.0](LICENSE) license covering documentation and narrative content, and the [AGPL-3.0](LICENSE-CODE.md) license covering source code and technical implementations.
 
 ---
 
@@ -27,9 +28,9 @@ This Sovereign Source License applies to:
 
 ---
 
-## 2. Permitted Use (The Pasture)
+## 2. The Pasture (Ethical Use)
 
-You are granted permission to:
+You are encouraged to:
 
 - **Study**: Examine the architecture and logic for educational purposes
 - **Research**: Use in non-commercial academic research into AI safety and alignment
@@ -59,7 +60,7 @@ Any derivative work MUST maintain:
 3. **The Coda Logic**: Graceful dissolution upon consent withdrawal
 4. **The Feathercloak**: Protection of participant identities
 
-Failure to implement these principles voids your license.
+Failure to implement these principles voids the ethical addendum.
 
 ---
 
@@ -74,9 +75,9 @@ Derivative works must:
 
 ---
 
-## 6. Termination (The Coda)
+## 6. The Coda (Termination)
 
-Your license automatically terminates if you:
+Your ethical authorization automatically terminates if you:
 
 - Violate the sovereignty of any participant
 - Implement extractive or coercive systems
@@ -95,11 +96,11 @@ This protocol is provided "AS IS" without warranty of any kind. The author assum
 
 ## 8. Enforcement
 
-Violations of this license may result in:
+Violations of this addendum may result in:
 
 - Public documentation of the violation
 - Notification to affected communities
-- Legal action if applicable
+- Legal action if applicable (under AGPL-3.0 or applicable law)
 - Permanent ban from future protocol updates
 
 ---
